@@ -1,5 +1,4 @@
 
-
 import 'package:hogool/network/global_data.dart';
 
 class SignUpModel{
@@ -8,7 +7,7 @@ class SignUpModel{
  String? password;
  String? email;
 
-SignUpModel({required this.fullName,required this.userName,required this.email,required this.password});
+SignUpModel({this.fullName, this.userName, this.email,this.password});
 
 
 }

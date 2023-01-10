@@ -39,11 +39,11 @@ static String singUpFarmer ="/singUpFarmer";
                         SizedBox(height:30),
                          fieldFormWidget(false,testStirng,"اسم المستخدم",modelView.nameIsValid,false,TextInputType.name),
                          SizedBox(height:30),
-                          fieldFormWidget(false,testStirng,"البريد الإلكتروني",modelView.nameIsValid,false,TextInputType.emailAddress),
+                          fieldFormWidget(false,testStirng,"البريد الإلكتروني",modelView.emailIsValid,false,TextInputType.emailAddress),
                          SizedBox(height:30),
-                        fieldFormWidget(false,testStirng,"كلمة المرور ",modelView.nameIsValid,true,TextInputType.name),
+                        fieldFormWidget(false,testStirng,"كلمة المرور ",modelView.passwordIsValid,true,TextInputType.name),
                          SizedBox(height:30),
-                         fieldFormWidget(false,testStirng,"تأكيد كلمة المرور",modelView.nameIsValid,true,TextInputType.name),
+                         fieldFormWidget(false,testStirng,"تأكيد كلمة المرور",modelView.RepasswordIsValid,true,TextInputType.name),
                          SizedBox(height:30),
                          Container(
                           width: double.infinity,
@@ -57,6 +57,7 @@ static String singUpFarmer ="/singUpFarmer";
                             ),
                             onPressed: (){
                               if (formKay.currentState!.validate()){
+                               
                                   //////write backend code here
                               }
                             },
@@ -112,7 +113,6 @@ Function validateor,bool isPassword,TextInputType inputType){
                  return  TextFormField(
 
                           onChanged: (value){
-                            formKay.currentState!.validate();
                             onChanged(value);
                           },
                           keyboardType:inputType,
