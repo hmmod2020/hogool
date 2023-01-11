@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:hogool/UI/sing_in_farmer.dart';
 
 import '../modelView/sing_up_farmer.dart';
 import '../widgets/customWidgets.dart';
@@ -85,7 +86,9 @@ static String singUpFarmer ="/singUpFarmer";
                                   fontSize: 20,
                                 ),
                                 ) ,
-                                onTap: (){},
+                                onTap: (){
+                                  Navigator.of(context).popAndPushNamed(SignInScreen.signInScreen);
+                                },
                               ),
                               Text(
                               "لديك حساب ؟ ",

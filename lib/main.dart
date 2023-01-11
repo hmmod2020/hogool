@@ -10,7 +10,7 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignInScreen(),
+      home: WelcomeScreen(),
       routes: {
         "/signUpAs":(context) => SingUpAs(),
         "/welcomePage":(context) => WelcomeScreen(),
