@@ -6,6 +6,8 @@ String tempPassword="";
 
 
 
+
+
 //////////////////validation//////////////
 String? userNameIsValid(String value){
 if(value.isEmpty||value==" "){
@@ -43,7 +45,6 @@ else{
   return "enter the vaild email";
 }
 }
-
 
 String? passwordIsValid(String value){
 

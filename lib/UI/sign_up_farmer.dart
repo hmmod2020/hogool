@@ -2,11 +2,13 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../modelView/sing_up_farmer.dart';
+import '../widgets/customWidgets.dart';
 
 class SingUpFarmer extends StatelessWidget {
 var modelView =SignUPFarmerModelView();
 var formKay=GlobalKey<FormState>();
 var testText="hmmod";
+
 static String singUpFarmer ="/singUpFarmer";
 
   @override
@@ -35,15 +37,16 @@ static String singUpFarmer ="/singUpFarmer";
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        fieldFormWidget(true,testStirng,"الإسم",modelView.nameIsValid,false,TextInputType.name),
+                        
+                        CustomWidget.fieldFormWidget(true,testStirng,"الإسم",modelView.nameIsValid,false,TextInputType.name),
                         SizedBox(height:30),
-                         fieldFormWidget(false,testStirng,"اسم المستخدم",modelView.nameIsValid,false,TextInputType.name),
+                         CustomWidget.fieldFormWidget(false,testStirng,"اسم المستخدم",modelView.nameIsValid,false,TextInputType.name),
                          SizedBox(height:30),
-                          fieldFormWidget(false,testStirng,"البريد الإلكتروني",modelView.emailIsValid,false,TextInputType.emailAddress),
+                         CustomWidget.fieldFormWidget(false,testStirng,"البريد الإلكتروني",modelView.emailIsValid,false,TextInputType.emailAddress),
                          SizedBox(height:30),
-                        fieldFormWidget(false,testStirng,"كلمة المرور ",modelView.passwordIsValid,true,TextInputType.name),
+                         CustomWidget.fieldFormWidget(false,testStirng,"كلمة المرور ",modelView.passwordIsValid,true,TextInputType.name),
                          SizedBox(height:30),
-                         fieldFormWidget(false,testStirng,"تأكيد كلمة المرور",modelView.RepasswordIsValid,true,TextInputType.name),
+                         CustomWidget.fieldFormWidget(false,testStirng,"تأكيد كلمة المرور",modelView.RepasswordIsValid,true,TextInputType.name),
                          SizedBox(height:30),
                          Container(
                           width: double.infinity,
@@ -105,58 +108,7 @@ static String singUpFarmer ="/singUpFarmer";
       ),
     );
   }
-//////////////////my widget for this screen///////////////////
 
-Widget fieldFormWidget(bool focased , Function onChanged ,String hintText,
-Function validateor,bool isPassword,TextInputType inputType){
- 
-                 return  TextFormField(
-
-                          onChanged: (value){
-                            onChanged(value);
-                          },
-                          keyboardType:inputType,
-                          obscureText:isPassword ,
-                          autofocus: focased,
-                          validator: (value){
-                          return validateor(value);
-                          },
-                          textDirection: TextDirection.rtl,
-                          decoration: InputDecoration(
-                            hintText: hintText,
-                            hintTextDirection: TextDirection.rtl,
-                            filled: true,
-                            fillColor: Color(0xffF0F9F1),
-                            enabledBorder:  OutlineInputBorder( 
-                              borderSide: BorderSide(
-                                color: Color(0xffF0F9F1),
-                              ), 
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
-                            ),
-                            focusedBorder: OutlineInputBorder(  
-                              borderRadius: BorderRadius.all(Radius.circular(15),),
-                              borderSide: BorderSide(
-                                color: Color(0xffF0F9F1)
-                              )
-                            ),
-                            errorBorder: OutlineInputBorder(  
-                              borderRadius: BorderRadius.all(Radius.circular(15),),
-                              borderSide: BorderSide(
-                                color: Colors.red,
-                              ),
-                            ),
-                            focusedErrorBorder:  OutlineInputBorder(  
-                              borderRadius: BorderRadius.all(Radius.circular(15),),
-                              borderSide: BorderSide(
-                                color: Colors.red,
-                              ),
-                            ) 
-                          ),
-                        );
-}
-
-
-//////////////////my widget for this screen///////////////////
 void testStirng(String h){
 
 print(h);
