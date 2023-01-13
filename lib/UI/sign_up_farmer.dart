@@ -61,7 +61,6 @@ static String singUpFarmer ="/singUpFarmer";
                             ),
                             onPressed: (){
                               if (formKay.currentState!.validate()){
-                               
                                   //////write backend code here
                               }
                             },

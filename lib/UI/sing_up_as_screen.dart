@@ -24,21 +24,22 @@ static String signUpAs="/signUpAs";
              BottonStart("مزارع",context,SingUpFarmer.singUpFarmer),
              BottonStart("مستثمر",context,SingUpFarmer.singUpFarmer),
              BottonStart("مالك اراضي",context,SingUpFarmer.singUpFarmer),
-
               ],
             )),
           Expanded(
             flex: 1,
             child: Container(
-              color: Colors.blueAccent[500],
+            color: Colors.blueAccent[500],
             )),
-
         ],
       )
       ),
 
   );
   }
+
+
+
 
 
 Widget BottonStart(String textButton,BuildContext context,String path){
