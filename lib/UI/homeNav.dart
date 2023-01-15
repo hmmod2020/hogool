@@ -1,21 +1,34 @@
 import 'package:flutter/material.dart';
 
+import 'account_screen.dart';
+import 'home_screen.dart';
+import 'notifications_screen.dart';
+import 'previous_works_screen.dart';
+
 class HomeNav extends StatefulWidget {
   const HomeNav({super.key});
-
   @override
   State<HomeNav> createState() => _HomeNavState();
 }
-
 class _HomeNavState extends State<HomeNav> {
+
+int _selectedItemScreen=0;
+var screensNav=[
+HomeScreen(),
+MyAccountScreen(),
+NotificationScreen(),
+PreviousWorksScreen()
+];
+
+
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: Center(
-        child: Text("Welcome from Navigation s"),
-      ),
+      body:screensNav[_selectedItemScreen],
       bottomNavigationBar:BottomNavigationBar(
+        currentIndex: _selectedItemScreen,
+        onTap: selectScreenNav,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Color(0xff4CAF50),
         unselectedLabelStyle: TextStyle(
@@ -49,4 +62,13 @@ class _HomeNavState extends State<HomeNav> {
       ) ,
     );
   }
+
+
+
+void selectScreenNav(int index){
+setState(() {
+_selectedItemScreen=index;
+});
+
+}
 }
