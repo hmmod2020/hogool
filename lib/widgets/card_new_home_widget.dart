@@ -4,11 +4,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class CardNewHome extends StatelessWidget {
-  
+  int id ;
   String titleNew;
   String description;
 
-     CardNewHome({super.key, required this.titleNew,required this.description});
+     CardNewHome({required this.id,super.key, required this.titleNew,required this.description});
   @override
   Widget build(BuildContext context) {
     return Container(

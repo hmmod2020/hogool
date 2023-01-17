@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/UI/homeNav.dart';
+import 'package:hogool/UI/welcome_screen.dart';
 import 'package:hogool/widgets/show_home_widget.dart';
 import '../widgets/card_farmer_home.dart';
+import '../widgets/card_investment_offer.dart';
 import '../widgets/card_new_home_widget.dart';
 import '../widgets/card_slied.dart';
 import '../widgets/slider_widget.dart';
@@ -39,8 +42,9 @@ class HomeScreen extends StatelessWidget {
                    SizedBox(height: 20,),   
               SliderWidgetControl() , 
               SizedBox(height: 20,),
-              ShowHomeWidget(titel: "تصفح المزارعين ",ontap: (){}),
+              ShowHomeWidget(titel: "تصفح المزارعين ",route: WelcomeScreen.welcomePage,),
               CardFarmerHome(
+                id: 0,
           farmerName: "محمد البدري",
           location: "الخرظوم",
           exepiernce: 5,
@@ -50,20 +54,19 @@ class HomeScreen extends StatelessWidget {
           image: "mohammed.jpg",
         ),
         SizedBox(height: 10,),
-         ShowHomeWidget(titel: "أحدث الأخبار ",ontap: (){},),
+         ShowHomeWidget(titel: "أحدث الأخبار ",route: WelcomeScreen.welcomePage),
          
-         CardNewHome(titleNew: "موسم شتوي ذو انتاجية عالية ", description: "أعلنت حكومة السودان تحقيق معدلات إنتاجية عالية في محصولات الموسم الزراعي لهذا العام، بلغت نحو 4 ملايين ونصف مليون طن ذرة، و700 ألف طن قمحاً"),
+         CardNewHome(id: 0, titleNew: "موسم شتوي ذو انتاجية عالية ", description: "أعلنت حكومة السودان تحقيق معدلات إنتاجية عالية في محصولات الموسم الزراعي لهذا العام، بلغت نحو 4 ملايين ونصف مليون طن ذرة، و700 ألف طن قمحاً"),
 
          SizedBox(height: 10,),
-         ShowHomeWidget(titel: "مزراعين مقترحين ",ontap: (){}),
-         CardFarmerHome(
-          farmerName: "محمد البدري",
-          location: "الخرظوم",
-          exepiernce: 5,
-          crops: [
-            "الذرة", "القمح","البطاطس"
-          ],
-          image: "mohammed.jpg",
+         ShowHomeWidget(titel: "إكتشف فرص العمل ",route:WelcomeScreen.welcomePage),
+         CardInvestmentOffer(
+          id: 0,
+          duration: 5,
+          titel: "مشروع انتاج قمح بسوبا",
+          description: "مطلوب ممول لمشروع زراعي في سوبا لزراعة 5 فدان قمح في مشروع سوبا الزراعي  والارض محورية الري",
+          yield: 50,
+          
         ),
                 ],
               ),

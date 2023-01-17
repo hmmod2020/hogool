@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CardFarmerHome extends StatelessWidget {
- 
+ int id;
  String image;
  String farmerName;
  String location;
  int exepiernce;
  List<String> crops;
 
- CardFarmerHome({required this.image,required this.farmerName,required this.location,required this.exepiernce,required this.crops});
+ CardFarmerHome({required this.id,required this.image,required this.farmerName,required this.location,required this.exepiernce,required this.crops});
 
   @override
   Widget build(BuildContext context) {

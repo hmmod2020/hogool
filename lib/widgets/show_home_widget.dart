@@ -7,7 +7,8 @@ class ShowHomeWidget extends StatelessWidget {
  
 
  String titel;
- ShowHomeWidget({required this.titel});
+ String route;
+ ShowHomeWidget({required this.titel,required this.route});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,9 @@ class ShowHomeWidget extends StatelessWidget {
                          ),
                          ),
                   ),
-                  onTap: (){},
+                  onTap:(){
+                    //Navigator.of(context).pushNamed(route);
+                  },
                ),
              ],
            ),),
