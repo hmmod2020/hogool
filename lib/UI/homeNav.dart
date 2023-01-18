@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'account_screen.dart';
+import 'farmer_search_screen.dart';
 import 'home_screen.dart';
 import 'notifications_screen.dart';
 import 'previous_works_screen.dart';
@@ -17,7 +18,8 @@ var screensNav=[
 HomeScreen(),
 MyAccountScreen(),
 NotificationScreen(),
-PreviousWorksScreen()
+FarmerSearchScreen(),
+//sPreviousWorksScreen(),
 ];
 
 
