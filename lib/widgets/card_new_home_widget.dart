@@ -16,9 +16,9 @@ class CardNewHome extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(20)),
       ),
      
-      margin: EdgeInsets.only(right: 20,left: 20),
+      margin: EdgeInsets.only(right: 15,left: 15),
       width: double.infinity,
-      height: 200,
+      height: 230,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -71,7 +71,7 @@ class CardNewHome extends StatelessWidget {
                                child: Text("اقرأ المزيد",
                                style: TextStyle(
                                 color: Colors.white,
-                                fontSize:15,
+                                fontSize:13,
                                 fontWeight: FontWeight.bold
                                ),
                                )

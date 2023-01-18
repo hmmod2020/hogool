@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
               CardFarmerHome(
                 id: 0,
           farmerName: "محمد البدري",
-          location: "الخرظوم",
+          location: "الخرطوم",
           exepiernce: 5,
           crops: [
             "الذرة", "القمح","البطاطس"

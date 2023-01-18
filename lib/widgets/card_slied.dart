@@ -15,7 +15,7 @@ SlideHogool({required this.image,required this.text});
     return Container(
       margin: EdgeInsets.only(right: 7,left: 7),
        width: 350,
-            height: 200,
+            height: 230,
       child: Stack(
         alignment: AlignmentDirectional.bottomCenter,
         children: [

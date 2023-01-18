@@ -17,7 +17,7 @@ void main() {
     GlobalCupertinoLocalizations.delegate,
   ],
   supportedLocales: [
-    Locale('ar','AE'), // English
+    Locale('ar','AE'), // Arabic
   ],
       debugShowCheckedModeBanner: false,
       home: HomeNav(),

@@ -14,12 +14,12 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 200,
+      height: 230,
      decoration: BoxDecoration(
       
         borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
-      margin: EdgeInsets.only(right: 20,left: 20),
+      margin: EdgeInsets.only(right: 15,left: 15),
       child: Card(
         color: Color(0xffF0F9F1),
         shape: RoundedRectangleBorder(
@@ -65,12 +65,12 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                             Text("العائد : ",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize:15
+                              fontSize:13
                             ),
                             ),
                             Text(yield.toString()+"%",
                             style: TextStyle(
-                              fontSize:15
+                              fontSize:13
                             ),
                             ),
                           ],
@@ -83,12 +83,12 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                             Text("المدة : ",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize:15
+                              fontSize:13
                             ),
                             ),
                             Text(duration.toString()+" "+"أشهر",
                             style: TextStyle(
-                              fontSize:15
+                              fontSize:13
                             ),
                             ),
                           ],
@@ -111,7 +111,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                       children: [
                         Expanded(child:Container()),
                         Container(
-                          margin: EdgeInsets.only(left: 20,bottom: 10),
+                          margin: EdgeInsets.only(left: 15,bottom: 5),
                           child: TextButton(
                           style: ButtonStyle(
                             backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
@@ -126,7 +126,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                            child: Text("مزيد من التفاصيل",
                            style: TextStyle(
                             color: Colors.white,
-                            fontSize:12,
+                            fontSize:10,
                             fontWeight: FontWeight.bold
                            ),
                            )

@@ -126,6 +126,9 @@ FarmerSearchScreen(){
             child:TextField(
               
               decoration: InputDecoration(
+                prefixIcon: Icon(Icons.search,
+                color: Color(0xff4CAF50),
+                ),
                             hintText: "قم بالبحث عن مزارع",
                             hintTextDirection: TextDirection.rtl,
                             filled: true,
@@ -157,7 +160,7 @@ FarmerSearchScreen(){
               ),
               child: InkWell(
                 child: Icon(
-                  Icons.filter_alt_off_outlined
+                  Icons.filter_alt_outlined
                 ),
                 onTap: (){},
               ),

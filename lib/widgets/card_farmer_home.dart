@@ -13,9 +13,9 @@ class CardFarmerHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 20,right: 20),
+      margin: EdgeInsets.only(left: 15,right: 15),
       width: double.infinity,
-      height: 200,
+      height: 230,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -93,7 +93,8 @@ class CardFarmerHome extends StatelessWidget {
                     Expanded(
                       flex: 25,
                       child: Container(
-                  width: 100,
+                        padding: EdgeInsets.only(top: 3,bottom: 3,left: 7,right: 7),
+                  width: 120,
                           height: 35,
                            child: TextButton(
                             style: ButtonStyle(
@@ -106,12 +107,14 @@ class CardFarmerHome extends StatelessWidget {
                              //////////////
                              ///show faremer by id
                             },
-                             child: Text("مزيد من التفاصيل",
-                             style: TextStyle(
-                              color: Colors.white,
-                              fontSize:12,
-                              fontWeight: FontWeight.bold
-                             ),
+                             child: Center(
+                               child: Text("مزيد من التفاصيل",
+                               style: TextStyle(
+                                color: Colors.white,
+                                fontSize:12,
+                                fontWeight: FontWeight.bold
+                               ),
+                               ),
                              )
                               ,
                              ),
