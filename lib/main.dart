@@ -20,7 +20,7 @@ void main() {
     Locale('ar','AE'), // Arabic
   ],
       debugShowCheckedModeBanner: false,
-      home: HomeNav(),
+      home: WelcomeScreen(),
       routes: {
         "/signUpAs":(context) => SingUpAs(),
         "/welcomePage":(context) => WelcomeScreen(),

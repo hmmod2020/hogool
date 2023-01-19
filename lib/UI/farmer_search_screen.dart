@@ -105,8 +105,7 @@ FarmerSearchScreen(){
                 crops:dataTest[index].crops,
                 location: dataTest[index].location,
                 );
-              }
-              
+              },
               ) 
            ),
           ],

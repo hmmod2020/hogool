@@ -8,10 +8,13 @@ import 'previous_works_screen.dart';
 
 class HomeNav extends StatefulWidget {
   const HomeNav({super.key});
+  static String route="/homeNav";
   @override
   State<HomeNav> createState() => _HomeNavState();
 }
 class _HomeNavState extends State<HomeNav> {
+
+
 
 int _selectedItemScreen=0;
 var screensNav=[

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/UI/homeNav.dart';
 import 'package:hogool/modelView/sign_in_modelView.dart';
 import 'package:hogool/widgets/customWidgets.dart';
 
@@ -61,7 +62,8 @@ class SignInScreen extends StatelessWidget {
                               ),
                               onPressed: (){
                                 if (formKay.currentState!.validate()){
-                               
+                                Navigator.of(context).pushNamed(HomeNav.route);
+                                   
                                   //////write backend code here
                               }
                               },

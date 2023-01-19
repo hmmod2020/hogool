@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/homeNav.dart';
 import 'package:hogool/UI/welcome_screen.dart';
+import 'package:hogool/widgets/card_rent_land.dart';
 import 'package:hogool/widgets/show_home_widget.dart';
 import '../widgets/card_farmer_home.dart';
 import '../widgets/card_investment_offer.dart';
@@ -68,6 +69,9 @@ class HomeScreen extends StatelessWidget {
           yield: 50,
           
         ),
+          SizedBox(height: 10,),
+         ShowHomeWidget(titel: "أفضل الأراضي الزراعية للاستثمار ",route:WelcomeScreen.welcomePage),
+         CardRentLand(),
                 ],
               ),
             ),

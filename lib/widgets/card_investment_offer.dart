@@ -42,103 +42,103 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                 ),
               )
               ),
-            Expanded(
-              flex: 65,
-              child:Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height:10 ,),
-                  Text(titel,
-                  style: TextStyle(
-                    fontSize: 19,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff4CAF50)
-                  ),
-                  ),
-                  SizedBox(height:15,),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex:1,
-                        child:Row(
-                          children: [
-                            Text("العائد : ",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize:13
-                            ),
-                            ),
-                            Text(yield.toString()+"%",
-                            style: TextStyle(
-                              fontSize:13
-                            ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        flex:1,
-                        child:Row(
-                          children: [
-                            Text("المدة : ",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize:13
-                            ),
-                            ),
-                            Text(duration.toString()+" "+"أشهر",
-                            style: TextStyle(
-                              fontSize:13
-                            ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10,),
-                  Expanded(
-                    flex: 60,
-                    child: Text(description+"...",
+           Expanded(
+                flex: 65,
+                child:Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height:10 ,),
+                    Text(titel,
                     style: TextStyle(
-                      fontSize: 13
+                      fontSize: 19,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xff4CAF50)
                     ),
                     ),
-                  ),
-                  Expanded(
-                    flex: 40,
-                    child: Row(
+                    SizedBox(height:15,),
+                    Row(
                       children: [
-                        Expanded(child:Container()),
-                        Container(
-                          margin: EdgeInsets.only(left: 15,bottom: 5),
-                          child: TextButton(
-                          style: ButtonStyle(
-                            backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
-                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15)
-                            ))
+                        Expanded(
+                          flex:1,
+                          child:Row(
+                            children: [
+                              Text("العائد : ",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize:13
+                              ),
+                              ),
+                              Text(yield.toString()+"%",
+                              style: TextStyle(
+                                fontSize:13
+                              ),
+                              ),
+                            ],
                           ),
-                          onPressed: (){
-                           //////////////
-                           ///show faremer by id
-                          },
-                           child: Text("مزيد من التفاصيل",
-                           style: TextStyle(
-                            color: Colors.white,
-                            fontSize:10,
-                            fontWeight: FontWeight.bold
-                           ),
-                           )
-                            ,
-                           ),
+                        ),
+                        Expanded(
+                          flex:1,
+                          child:Row(
+                            children: [
+                              Text("المدة : ",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize:13
+                              ),
+                              ),
+                              Text(duration.toString()+" "+"أشهر",
+                              style: TextStyle(
+                                fontSize:13
+                              ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
-                    )
-                  ),
-                ],
-              )
-            ),
+                    ),
+                    SizedBox(height: 10,),
+                    Expanded(
+                      flex: 60,
+                      child: Text(description+"...",
+                      style: TextStyle(
+                        fontSize: 13
+                      ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 40,
+                      child: Row(
+                        children: [
+                          Expanded(child:Container()),
+                          Container(
+                            margin: EdgeInsets.only(left: 15,bottom: 5),
+                            child: TextButton(
+                            style: ButtonStyle(
+                              backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15)
+                              ))
+                            ),
+                            onPressed: (){
+                             //////////////
+                             ///show faremer by id
+                            },
+                             child: Text("مزيد من التفاصيل",
+                             style: TextStyle(
+                              color: Colors.white,
+                              fontSize:10,
+                              fontWeight: FontWeight.bold
+                             ),
+                             )
+                              ,
+                             ),
+                          ),
+                        ],
+                      )
+                    ),
+                  ],
+                )
+              ),
           ],
         ),
       ),

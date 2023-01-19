@@ -5,9 +5,6 @@ var userData=SignUpModel();
 String tempPassword="";
 
 
-
-
-
 //////////////////validation//////////////
 String? userNameIsValid(String value){
 if(value.isEmpty||value==" "){
