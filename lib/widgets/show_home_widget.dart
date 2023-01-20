@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hogool/UI/farmer_search_screen.dart';
 
 import 'card_farmer_home.dart';
 
@@ -44,7 +46,7 @@ class ShowHomeWidget extends StatelessWidget {
                          ),
                   ),
                   onTap:(){
-                    //Navigator.of(context).pushNamed(route);
+                    Navigator.push(context, CupertinoPageRoute(builder: (context)=>FarmerSearchScreen()));
                   },
                ),
              ],

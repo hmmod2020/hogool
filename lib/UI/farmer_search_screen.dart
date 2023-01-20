@@ -70,7 +70,7 @@ FarmerSearchScreen(){
           ],
           image: "mohammed.jpg",),);
 }
-
+static String farmerScreen="/farmerScreen";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -159,7 +159,8 @@ FarmerSearchScreen(){
               ),
               child: InkWell(
                 child: Icon(
-                  Icons.filter_alt_outlined
+                  Icons.filter_alt_outlined,
+                  color: Color(0xff4CAF50),
                 ),
                 onTap: (){},
               ),

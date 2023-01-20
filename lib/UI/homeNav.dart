@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'account_screen.dart';
@@ -6,74 +7,103 @@ import 'home_screen.dart';
 import 'notifications_screen.dart';
 import 'previous_works_screen.dart';
 
-class HomeNav extends StatefulWidget {
-  const HomeNav({super.key});
+class HomeNav extends StatelessWidget {
+
+final GlobalKey<NavigatorState> firstTabNavKey = GlobalKey<NavigatorState>();
+final GlobalKey<NavigatorState> secondTabNavKey = GlobalKey<NavigatorState>();
+final GlobalKey<NavigatorState> thirdTabNavKey = GlobalKey<NavigatorState>();
+final GlobalKey<NavigatorState> fourthTabNavKey = GlobalKey<NavigatorState>();
+
+CupertinoTabController tabController=CupertinoTabController(initialIndex: 0);
+
   static String route="/homeNav";
-  @override
-  State<HomeNav> createState() => _HomeNavState();
-}
-class _HomeNavState extends State<HomeNav> {
 
-
-
-int _selectedItemScreen=0;
-var screensNav=[
-HomeScreen(),
-MyAccountScreen(),
-NotificationScreen(),
-FarmerSearchScreen(),
-//sPreviousWorksScreen(),
-];
-
-
-  @override
+    @override
   Widget build(BuildContext context) {
 
-    return Scaffold(
-      body:screensNav[_selectedItemScreen],
-      bottomNavigationBar:BottomNavigationBar(
-        currentIndex: _selectedItemScreen,
-        onTap: selectScreenNav,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Color(0xff4CAF50),
-        unselectedLabelStyle: TextStyle(
-          fontSize: 10,
-          color: Colors.black
+var listOfKeys=[firstTabNavKey,secondTabNavKey,thirdTabNavKey,fourthTabNavKey];
+
+    return WillPopScope(
+      onWillPop: ()async {
+         return !await listOfKeys[tabController.index].currentState!.maybePop();
+      },
+      child: CupertinoTabScaffold(
+        controller: tabController,
+        tabBar:CupertinoTabBar(
+          
+          backgroundColor: Colors.white,
+          activeColor: Color(0xff4CAF50),
+          inactiveColor: Colors.black,
+          items:const<BottomNavigationBarItem> [
+     BottomNavigationBarItem(
+              icon:Icon(Icons.home_outlined,
+              size: 27,
+              ),
+              label: "الرئيسية"
+            ),
+            BottomNavigationBarItem(
+              
+              icon:Icon(Icons.person_outline,
+              size: 27,
+              ),
+              label: "حسابي"
+            ),
+             BottomNavigationBarItem(
+              icon:Icon(Icons.notifications_outlined,
+              size: 27,
+              ),
+              label: "الإشعارات"
+            ),
+             BottomNavigationBarItem(
+              icon:Icon(Icons.save_outlined,
+              size: 27,
+              ),
+              label: "الاعمال السابقة"
+            ),
+          ],
+        ) ,
+        
+        tabBuilder: (context,index){
+          switch (index) {
+            case 0:
+              return CupertinoTabView(builder:(context){
+              
+                return CupertinoPageScaffold(child: HomeScreen());
+              },
+              navigatorKey: listOfKeys[index],
+              );
+              break;
+              case 1:
+              return CupertinoTabView(builder:(context){
+                return CupertinoPageScaffold(child: MyAccountScreen());
+              },
+              navigatorKey: listOfKeys[index],
+              );
+              break;
+              case 2:
+              return CupertinoTabView(builder:(context){
+                return CupertinoPageScaffold(child: NotificationScreen());
+              },
+              navigatorKey: listOfKeys[index],
+              );
+              break;
+              case 3:
+              return CupertinoTabView(builder:(context){
+                return CupertinoPageScaffold(child: PreviousWorksScreen());
+              },
+              navigatorKey: listOfKeys[index],);
+              break;
+            default:
+            return CupertinoTabView(builder:(context){
+                return CupertinoPageScaffold(child: HomeScreen());
+              },
+              navigatorKey: listOfKeys[index],
+              );
+          }
+        }
+        
         ),
-        unselectedItemColor: Colors.black,
-        items: [
-          BottomNavigationBarItem(
-            icon:Icon(Icons.home_outlined,
-            ),
-            label: "الرئيسية"
-          ),
-          BottomNavigationBarItem(
-            icon:Icon(Icons.person_outline,
-            ),
-            label: "حسابي"
-          ),
-           BottomNavigationBarItem(
-            icon:Icon(Icons.notifications_outlined,
-            ),
-            label: "الإشعارات"
-          ),
-           BottomNavigationBarItem(
-            icon:Icon(Icons.save_outlined,
-            ),
-            label: "الاعمال السابقة"
-          ),
-           
-        ],
-      ) ,
     );
   }
-
-
-
-void selectScreenNav(int index){
-setState(() {
-_selectedItemScreen=index;
-});
-
 }
-}
+

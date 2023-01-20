@@ -11,8 +11,8 @@ class MyAccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: CardRentLand(
-          
+        child: Text(
+          "PreviousWorksScreen"
         ),
       ),
     );

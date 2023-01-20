@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CardRentLand extends StatelessWidget {
-  const CardRentLand({super.key});
-
+ 
   @override
   Widget build(BuildContext context) {
     return Container(
