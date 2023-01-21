@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/model/card_land_model.dart';
+
 
 class CardRentLand extends StatelessWidget {
- 
+
+  LandData data ;
+CardRentLand({required this.data});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,8 +28,9 @@ class CardRentLand extends StatelessWidget {
                     flex: 2,
                     child:Container(
                       margin: EdgeInsets.only(right: 12,top: 10),
-                      child: Text("ارض زراعية للايجار ",
+                      child: Text(data.title,
                       style: TextStyle(
+                      
                         color: Color(0xff4CAF50),
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -37,7 +43,7 @@ class CardRentLand extends StatelessWidget {
                     flex: 1,
                     child: Container(
                         margin: EdgeInsets.only(top: 10),
-                      child: Text("المدة : "+"6 "+"أشهر",
+                      child: Text("المدة : "+" "+data.duration.toString()+" اشهر " ,
                       style:TextStyle(
                         fontSize: 17,
                       ),
@@ -51,7 +57,7 @@ class CardRentLand extends StatelessWidget {
               flex: 5,
               child:Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(" معلومات هنا بتتكلم عن الحاصل معلومات هنا بتتكلم عن الحاصلمعلومات هنا بتتكلم عن الحاصل معلومات هنا بتتكلم عن الحاصل معلومات هنا بتتكلم عن الحاصل "+"..."),
+                child: Text( data.description+"..."),
               ),
             ),
             Expanded(

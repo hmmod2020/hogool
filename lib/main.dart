@@ -13,6 +13,10 @@ import 'UI/sign_up_farmer.dart';
 void main() {
   runApp(
     CupertinoApp(
+      theme: CupertinoThemeData(
+        
+        primaryColor: Color(0xff4CAF50),
+      ),
       localizationsDelegates: [
     GlobalMaterialLocalizations.delegate,
     GlobalWidgetsLocalizations.delegate,

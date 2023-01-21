@@ -9,8 +9,9 @@ class ShowHomeWidget extends StatelessWidget {
  
 
  String titel;
- String route;
- ShowHomeWidget({required this.titel,required this.route});
+ Widget screenRoute;
+
+ ShowHomeWidget({required this.titel,required this.screenRoute});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +47,7 @@ class ShowHomeWidget extends StatelessWidget {
                          ),
                   ),
                   onTap:(){
-                    Navigator.push(context, CupertinoPageRoute(builder: (context)=>FarmerSearchScreen()));
+                    Navigator.push(context, CupertinoPageRoute(builder: (context)=>screenRoute));
                   },
                ),
              ],

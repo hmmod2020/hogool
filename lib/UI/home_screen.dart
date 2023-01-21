@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/farmer_search_screen.dart';
 import 'package:hogool/UI/homeNav.dart';
+import 'package:hogool/UI/land_search.dart';
 import 'package:hogool/UI/welcome_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:hogool/model/card_land_model.dart';
 import 'package:hogool/widgets/card_rent_land.dart';
 import 'package:hogool/widgets/show_home_widget.dart';
 import '../widgets/card_farmer_home.dart';
@@ -45,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                    SizedBox(height: 20,),   
               SliderWidgetControl() , 
               SizedBox(height: 20,),
-              ShowHomeWidget(titel: "تصفح المزارعين ",route: FarmerSearchScreen.farmerScreen),
+              ShowHomeWidget(titel: "تصفح المزارعين ",screenRoute:FarmerSearchScreen(),),
               CardFarmerHome(
                 id: 0,
           farmerName: "محمد البدري",
@@ -57,12 +59,12 @@ class HomeScreen extends StatelessWidget {
           image: "mohammed.jpg",
         ),
         SizedBox(height: 10,),
-         ShowHomeWidget(titel: "أحدث الأخبار ",route: WelcomeScreen.welcomePage),
+         ShowHomeWidget(titel: "أحدث الأخبار ",screenRoute:FarmerSearchScreen(),),
          
          CardNewHome(id: 0, titleNew: "موسم شتوي ذو انتاجية عالية ", description: "أعلنت حكومة السودان تحقيق معدلات إنتاجية عالية في محصولات الموسم الزراعي لهذا العام، بلغت نحو 4 ملايين ونصف مليون طن ذرة، و700 ألف طن قمحاً"),
 
          SizedBox(height: 10,),
-         ShowHomeWidget(titel: "إكتشف فرص العمل ",route:WelcomeScreen.welcomePage),
+         ShowHomeWidget(titel: "إكتشف فرص العمل ",screenRoute:FarmerSearchScreen(),),
          CardInvestmentOffer(
           id: 0,
           duration: 5,
@@ -71,7 +73,9 @@ class HomeScreen extends StatelessWidget {
           yield: 50,
           
         ),
-          
+        SizedBox(height: 10,),
+         ShowHomeWidget(titel: "افضل الاراضي للاستثمار",screenRoute: LandsScreen(),),
+          CardRentLand(data: LandData(title: "10 فدان للايجار",duration: 6,description: "ارض زراعية مكتلمة الخدمات بمساحة 10 فدان في محلية جبل اولياء للايجار النصف سنوي"))
                 ],
               ),
             ),

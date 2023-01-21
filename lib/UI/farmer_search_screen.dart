@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hogool/model/card_farmer_model.dart';
 import 'package:hogool/widgets/card_farmer_home.dart';
 
+import '../widgets/custom_fillter_dilog_farmer.dart';
+
 class FarmerSearchScreen extends StatelessWidget {
 
 List<cardFarmerModel> dataTest=[];  
@@ -93,7 +95,7 @@ static String farmerScreen="/farmerScreen";
             width: double.infinity,
             height: 70,
             margin: EdgeInsets.only(right: 20),
-            child: searchScreen()),
+            child: searchScreen(context)),
            SizedBox(height: 20,),
            Expanded(
              child:ListView.builder(
@@ -115,7 +117,7 @@ static String farmerScreen="/farmerScreen";
   }
 
 
-  Widget searchScreen(){
+  Widget searchScreen(BuildContext context){
 
     return Container(
       child: Row(
@@ -162,7 +164,12 @@ static String farmerScreen="/farmerScreen";
                   Icons.filter_alt_outlined,
                   color: Color(0xff4CAF50),
                 ),
-                onTap: (){},
+                onTap: (){
+
+                  showDialog(context:context, builder: ((context) {
+                    return FillterFarmerSearchDilog() ;
+                  }));
+                },
               ),
             ),
              ),
