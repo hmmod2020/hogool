@@ -8,6 +8,7 @@ import 'package:hogool/UI/sing_up_as_screen.dart';
 import 'package:hogool/UI/welcome_screen.dart';
 import 'package:lottie/lottie.dart';
 
+import 'UI/farmer_info_Screen.dart';
 import 'UI/sign_up_farmer.dart';
 
 void main() {

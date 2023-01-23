@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CardFarmerHome extends StatelessWidget {
@@ -7,8 +8,8 @@ class CardFarmerHome extends StatelessWidget {
  String location;
  int exepiernce;
  List<String> crops;
-
- CardFarmerHome({required this.id,required this.image,required this.farmerName,required this.location,required this.exepiernce,required this.crops});
+Widget screenRoute;
+ CardFarmerHome({required this.id,required this.image,required this.farmerName,required this.location,required this.exepiernce,required this.crops, required this.screenRoute});
 
   @override
   Widget build(BuildContext context) {
@@ -103,10 +104,10 @@ class CardFarmerHome extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(15)
                               ))
                             ),
-                            onPressed: (){
-                             //////////////
-                             ///show faremer by id
-                            },
+                            onPressed:(){
+               Navigator.push(context, CupertinoPageRoute(builder: (context)=>screenRoute));
+
+                            } ,
                              child: Center(
                                child: Text("مزيد من التفاصيل",
                                style: TextStyle(

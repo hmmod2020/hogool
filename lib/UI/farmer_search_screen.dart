@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/UI/farmer_info_Screen.dart';
 import 'package:hogool/model/card_farmer_model.dart';
 import 'package:hogool/widgets/card_farmer_home.dart';
 
@@ -106,6 +107,7 @@ static String farmerScreen="/farmerScreen";
                 farmerName: dataTest[index].farmerName,
                 crops:dataTest[index].crops,
                 location: dataTest[index].location,
+                screenRoute:FarmerInfoScreen(),
                 );
               },
               ) 

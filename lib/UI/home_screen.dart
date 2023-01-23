@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hogool/UI/farmer_info_Screen.dart';
 import 'package:hogool/UI/farmer_search_screen.dart';
 import 'package:hogool/UI/homeNav.dart';
 import 'package:hogool/UI/land_search.dart';
@@ -57,6 +59,7 @@ class HomeScreen extends StatelessWidget {
             "الذرة", "القمح","البطاطس"
           ],
           image: "mohammed.jpg",
+          screenRoute: FarmerInfoScreen() ,
         ),
         SizedBox(height: 10,),
          ShowHomeWidget(titel: "أحدث الأخبار ",screenRoute:FarmerSearchScreen(),),
