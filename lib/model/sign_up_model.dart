@@ -6,14 +6,16 @@ class SignUpModel{
  String? userName;
  String? password;
  String? email;
+ String? accountType;
 
-SignUpModel({this.fullName, this.userName, this.email,this.password});
+SignUpModel({this.fullName, this.userName, this.email,this.password,this.accountType});
 
 SignUpModel.fromJson(Map <String ,dynamic> json){
 fullName=json["fullName"];
 userName=json["userName"];
 password=json["password"];
 email=json["email"];
+accountType=json["accountType"];
 }
 
 Map<String,dynamic>toJSON( ){
@@ -23,7 +25,7 @@ Map<String,dynamic>toJSON( ){
     "userName":userName,
     "password":password,
     "email":email,
-
+    "accountType":accountType
   };
 
 }

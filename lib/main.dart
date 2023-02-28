@@ -9,6 +9,9 @@ import 'package:hogool/UI/welcome_screen.dart';
 import 'package:lottie/lottie.dart';
 
 import 'UI/farmer_info_Screen.dart';
+import 'UI/land_screen.dart';
+import 'UI/new_screen.dart';
+import 'UI/projects_screen.dart';
 import 'UI/sign_up_farmer.dart';
 
 void main() {
@@ -27,7 +30,7 @@ void main() {
     Locale('ar','AE'), // Arabic
   ],
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      home: LandScreen(),
       routes: {
         "/signUpAs":(context) => SingUpAs(),
         "/welcomePage":(context) => WelcomeScreen(),

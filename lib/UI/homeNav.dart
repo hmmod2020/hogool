@@ -5,7 +5,7 @@ import 'account_screen.dart';
 import 'farmer_search_screen.dart';
 import 'home_screen.dart';
 import 'notifications_screen.dart';
-import 'previous_works_screen.dart';
+import 'projects_screen.dart';
 
 class HomeNav extends StatelessWidget {
 
@@ -58,7 +58,7 @@ var listOfKeys=[firstTabNavKey,secondTabNavKey,thirdTabNavKey,fourthTabNavKey];
               icon:Icon(Icons.save_outlined,
               size: 27,
               ),
-              label: "الاعمال السابقة"
+              label: "اعمالي"
             ),
           ],
         ) ,
@@ -89,7 +89,7 @@ var listOfKeys=[firstTabNavKey,secondTabNavKey,thirdTabNavKey,fourthTabNavKey];
               break;
               case 3:
               return CupertinoTabView(builder:(context){
-                return CupertinoPageScaffold(child: PreviousWorksScreen());
+                return CupertinoPageScaffold(child: ProjectsScreen());
               },
               navigatorKey: listOfKeys[index],);
               break;

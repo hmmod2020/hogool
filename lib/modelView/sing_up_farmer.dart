@@ -1,7 +1,20 @@
+import 'package:chopper/chopper.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 import '../model/sign_up_model.dart';
+import '../network/signUp_service.dart';
+import '../widgets/dilog_done.dart';
+import '../widgets/dilog_error.dart';
 
 class SignUPFarmerModelView {
 var userData=SignUpModel();
+late SignUpServeics server;
+
+ SignUPFarmerModelView(){
+userData.accountType="farmer";
+server =new SignUpServeics();
+}
 String tempPassword="";
 
 
@@ -73,5 +86,37 @@ if(value==tempPassword){
 }
 //////////////////validation//////////////
 
+void signUp(BuildContext context) async{
+ 
+var response= await server.SignUp(userData.toJSON());
+if (response=="Welcome"+userData.fullName.toString()){
+Navigator.of(context).pop();
+   Future.delayed(Duration(milliseconds: 300), () {
+    showDialog(
+    barrierDismissible:true ,
+    context:context, builder: ((context) {
+    return DoneDilog();
+    }));
+  // Do something
+});
+
+
+}else{
+  Navigator.of(context).pop();
+  showDialog(
+    barrierDismissible:true ,
+    context:context, builder: ((context) {
+    return ErrorDilog();
+    }));
+}
+}
+
 
 }
+
+
+/** showDialog(
+    barrierDismissible:false ,
+    context:context, builder: ((context) {
+    return ErrorDilog();
+    }));*/

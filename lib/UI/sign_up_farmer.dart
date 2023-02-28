@@ -1,14 +1,19 @@
+import 'package:chopper/chopper.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/sing_in_farmer.dart';
-
+import 'package:hogool/model/sign_up_model.dart';
+import 'package:hogool/widgets/dilog_done.dart';
+import '../widgets/dilog_error.dart';
 import '../modelView/sing_up_farmer.dart';
 import '../widgets/customWidgets.dart';
+import '../widgets/dilog_loading.dart';
 
 class SingUpFarmer extends StatelessWidget {
 var modelView =SignUPFarmerModelView();
 var formKay=GlobalKey<FormState>();
 var testText="hmmod";
+
 
 static String singUpFarmer ="/singUpFarmer";
 
@@ -38,10 +43,9 @@ static String singUpFarmer ="/singUpFarmer";
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        
                         CustomWidget.fieldFormWidget(true,testStirng,"الإسم",modelView.nameIsValid,false,TextInputType.name),
                         SizedBox(height:30),
-                         CustomWidget.fieldFormWidget(false,testStirng,"اسم المستخدم",modelView.nameIsValid,false,TextInputType.name),
+                         CustomWidget.fieldFormWidget(false,testStirng,"اسم المستخدم",modelView.userNameIsValid,false,TextInputType.name),
                          SizedBox(height:30),
                          CustomWidget.fieldFormWidget(false,testStirng,"البريد الإلكتروني",modelView.emailIsValid,false,TextInputType.emailAddress),
                          SizedBox(height:30),
@@ -61,7 +65,12 @@ static String singUpFarmer ="/singUpFarmer";
                             ),
                             onPressed: (){
                               if (formKay.currentState!.validate()){
-                                  //////write backend code here
+                                  showDialog(
+    barrierDismissible:false ,
+    context:context, builder: ((context) {
+    return LoadingDilog();
+    }));
+                                  modelView.signUp(context);
                               }
                             },
                              child: Text("تسجيل الحساب",
@@ -116,3 +125,10 @@ void testStirng(String h){
 print(h);
 }
 }
+
+
+/**showDialog(
+     barrierDismissible:false ,
+    context:context, builder: ((context) {
+    return ErrorDilog();
+    })); */
