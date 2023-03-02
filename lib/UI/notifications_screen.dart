@@ -3,21 +3,42 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
+import '../widgets/card_notifications.dart';
 
 
 
 class NotificationScreen extends StatelessWidget {
-  const NotificationScreen({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: Lottie.asset("assets/loader.json",repeat: true,
-        fit: BoxFit.cover
-        )),
+      body: SafeArea(
+        child:Padding(
+          padding: const EdgeInsets.only(top:30,right: 25,left: 25),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Text("الإشعارات",
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Color(0xff4CAF50),
+                          fontWeight: FontWeight.bold
+                        ),
+                        ),
+
+                ],
+              ),
+             CardNotificationsFramer()
+              
+            ],
+          ),
+        ),
+      )
     );
   }
 }
+
+//,

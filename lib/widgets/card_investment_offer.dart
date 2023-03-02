@@ -1,4 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hogool/UI/new_screen.dart';
+
+import '../UI/land_screen.dart';
 
 class CardInvestmentOffer extends StatelessWidget {
 
@@ -122,6 +126,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                             onPressed: (){
                              //////////////
                              ///show faremer by id
+                             
                             },
                              child: Text("مزيد من التفاصيل",
                              style: TextStyle(

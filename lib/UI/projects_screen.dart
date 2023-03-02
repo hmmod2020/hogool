@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'farmer_orders.dart';
 
 class ProjectsScreen extends StatelessWidget {
   
@@ -19,13 +22,13 @@ class ProjectsScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold
                   ),
                   )),
-      buttonProject("عروضي",Container()),
+      buttonProject("عروضي",Container(),context),
       SizedBox(height: 20,),
-      buttonProject("الأراضي",Container()),
+      buttonProject("الأراضي",Container(),context),
       SizedBox(height: 20,),
-      buttonProject("طلبات العمل",Container()),
+      buttonProject("طلبات العمل",Container(),context),
       SizedBox(height: 20,),
-      buttonProject("المشاريع",Container()),
+      buttonProject("المشاريع",Container(),context),
       SizedBox(height: 40,),
 
             Center(
@@ -59,7 +62,7 @@ class ProjectsScreen extends StatelessWidget {
       ),
     );
   }
-Widget buttonProject(String titel,Widget screenRoute){
+Widget buttonProject(String titel,Widget screenRoute,BuildContext context){
 
   return InkWell(
     child: Container(
@@ -86,7 +89,10 @@ Widget buttonProject(String titel,Widget screenRoute){
         ],
       ),
     ),
-    onTap: (){},
+    onTap: (){
+       Navigator.push(context, CupertinoPageRoute(builder: (context)=>FarmerOrders()));
+      
+    },
   );
 }
 

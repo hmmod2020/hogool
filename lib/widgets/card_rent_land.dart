@@ -1,5 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hogool/UI/land_search.dart';
 import 'package:hogool/model/card_land_model.dart';
+
+import '../UI/land_screen.dart';
 
 
 class CardRentLand extends StatelessWidget {
@@ -76,6 +80,7 @@ CardRentLand({required this.data});
                               ),
                               onPressed: (){
                                //////////////
+                                Navigator.push(context, CupertinoPageRoute(builder: (context)=>LandScreen()));
                                ///show faremer by id
                               },
                                child: Center(

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'account_farmer.dart';
 import 'account_screen.dart';
 import 'farmer_search_screen.dart';
 import 'home_screen.dart';
@@ -75,7 +76,7 @@ var listOfKeys=[firstTabNavKey,secondTabNavKey,thirdTabNavKey,fourthTabNavKey];
               break;
               case 1:
               return CupertinoTabView(builder:(context){
-                return CupertinoPageScaffold(child: MyAccountScreen());
+                return CupertinoPageScaffold(child: AccountFarmer());
               },
               navigatorKey: listOfKeys[index],
               );

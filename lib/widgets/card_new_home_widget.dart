@@ -1,7 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/material.dart';
+
+import '../UI/new_screen.dart';
 
 class CardNewHome extends StatelessWidget {
   int id ;
@@ -66,6 +69,7 @@ class CardNewHome extends StatelessWidget {
                               ),
                               onPressed: (){
                                //////////////
+                                Navigator.push(context, CupertinoPageRoute(builder: (context)=>NewScreen()));
                                ///for show all news
                               },
                                child: Text("اقرأ المزيد",

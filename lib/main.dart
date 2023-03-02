@@ -8,8 +8,12 @@ import 'package:hogool/UI/sing_up_as_screen.dart';
 import 'package:hogool/UI/welcome_screen.dart';
 import 'package:lottie/lottie.dart';
 
+import 'UI/account_farmer.dart';
+import 'UI/create_invesment_screen.dart';
 import 'UI/farmer_info_Screen.dart';
+import 'UI/farmer_orders.dart';
 import 'UI/land_screen.dart';
+import 'UI/my_offers_screen.dart';
 import 'UI/new_screen.dart';
 import 'UI/projects_screen.dart';
 import 'UI/sign_up_farmer.dart';
@@ -30,7 +34,7 @@ void main() {
     Locale('ar','AE'), // Arabic
   ],
       debugShowCheckedModeBanner: false,
-      home: LandScreen(),
+      home:CreateInvesmentScreen(),
       routes: {
         "/signUpAs":(context) => SingUpAs(),
         "/welcomePage":(context) => WelcomeScreen(),

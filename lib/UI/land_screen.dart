@@ -124,16 +124,89 @@ SizedBox(width: 10,),
                           ////sec 1
                           Expanded(
                           flex:65,
-                          child:Column(
-                            children: [
-                              Row(),
-                              SizedBox(height: 10,),
-                               Row(),
-                              SizedBox(height: 10,),
-                              Row(),
-                              SizedBox(height: 10,),
-                              
-                            ],
+                          child:Padding(
+                            padding: const EdgeInsets.only(left:20,right: 20),
+                            child: Column(
+                              children: [
+                                SizedBox(height: 5,),
+                                Row(
+                                  children: [
+                                    Text("مدة الايجار:",
+                                    style: TextStyle(
+                                      color: Color(0xff4CAF50),
+                                      fontSize: 15
+                                    ),
+                                    ),
+                                    Text(" 6",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15
+                                    ),
+                                    ),
+                                    Text(" أشهر",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15
+                                    ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 5,),
+                                 Row(
+                                  children: [
+                                      Text("طريقة الري :",
+                                    style: TextStyle(
+                                      color: Color(0xff4CAF50),
+                                      fontSize: 15
+                                    ),
+                                    ),
+                                    Text("محوري",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15
+                                    ),
+                                    ),
+                                  ],
+                                 ),
+                                SizedBox(height: 5,),
+                                Row(
+                                  children: [
+                                    Container(
+                                      width: 35,
+                                      height: 35,
+                                      child: Image.asset("assets/Coins.png"),
+                                    ),
+                                      Text("70000",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15
+                                    ),
+                                    ),
+                                     Text(" للشهر",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15
+                                    ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 10,),
+                                Row(
+                                  children: [
+                                    Text("وصف الأرض :",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 15
+                                    ),
+                                    ),
+                                  ],
+                                ),
+                                Expanded(
+                                  child:Text("وصف الارضوصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض::وصف الارضوصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض:وصف الارض::")
+                                
+                                ),
+                              ],
+                            ),
                           )
                           
                           ),
@@ -141,7 +214,31 @@ SizedBox(width: 10,),
                           Expanded(
                           flex:25,
                           child: Container(
-                            color: Colors.blue,
+                           child: Center(
+                            child: Container(
+                width: 200,
+                height: 60,
+                child: TextButton(
+                              style: ButtonStyle(
+                                backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)
+                                ))
+                              ),
+                              onPressed: (){
+                               
+                              },
+                               child: Text("طلب ايجار ",
+                               style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold
+                               ),
+                               )
+                                ,
+                               ),
+              ),
+                           ),
                           )),
                           //sec 3
                       ],
@@ -150,17 +247,22 @@ SizedBox(width: 10,),
                   ),
               ],
             ),
-            Container(
-              width: 35,
-              height: 35,
-              margin: EdgeInsets.only(top: 20,right: 20),
-              decoration:BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(100))
+            InkWell(
+              child: Container(
+                width: 35,
+                height: 35,
+                margin: EdgeInsets.only(top: 20,right: 20),
+                decoration:BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(100))
+                ),
+                child: Center(
+                  child: Image.asset("assets/back_t.png")
+                ),
               ),
-              child: Center(
-                child: Image.asset("assets/back_t.png")
-              ),
+              onTap: (){
+                Navigator.of(context).pop();
+              },
             )
 
           ],

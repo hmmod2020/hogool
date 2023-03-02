@@ -92,6 +92,10 @@ flutter:
     - Coins.png
     - User.png
     - marker.png
+    - green.png
+    - red.png
+    - gray.png
+    - Phone.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
