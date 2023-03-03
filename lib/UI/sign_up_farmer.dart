@@ -68,7 +68,7 @@ static String singUpFarmer ="/singUpFarmer";
                                   showDialog(
     barrierDismissible:false ,
     context:context, builder: ((context) {
-    return LoadingDilog();
+    return LoadingDilog(title: "جاري تسجيل الحساب",);
     }));
                                   modelView.signUp(context);
                               }

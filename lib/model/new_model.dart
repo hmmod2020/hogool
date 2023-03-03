@@ -2,19 +2,19 @@
 class NewModel{
   
  int? id;
- String? titel;
+ String? title;
  String? pic;
- String? contents;
+ String? contnet;
  bool? avalability;
  
 
-NewModel({this.id, this.titel, this.pic,this.contents,this.avalability});
+NewModel({this.id, this.title, this.pic,this.contnet,this.avalability});
 
 NewModel.fromJson(Map <String ,dynamic> json){
 id=json["id"];
-titel=json["titel"];
+title=json["title"];
 pic=json["pic"];
-contents=json["contents"];
+contnet=json["contnet"];
 avalability=json["avalability"];
 }
 
@@ -22,9 +22,9 @@ Map<String,dynamic>toJSON( ){
 
   return {
     "id":id,
-    "titel":titel,
+    "titel":title,
     "pic":pic,
-    "contents":contents,
+    "contents":contnet,
     "avalability":avalability
   };
 

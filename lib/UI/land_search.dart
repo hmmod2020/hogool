@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hogool/model/card_land_model.dart';
+import 'package:hogool/model/land_model.dart';
 import 'package:hogool/widgets/card_rent_land.dart';
+
+import '../model/card_land_model.dart';
 
 class LandsScreen extends StatelessWidget {
   

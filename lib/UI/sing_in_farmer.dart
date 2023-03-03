@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/homeNav.dart';
 import 'package:hogool/modelView/sign_in_modelView.dart';
+import 'package:hogool/network/global_data.dart';
+import 'package:hogool/network/network_service.dart';
 import 'package:hogool/widgets/customWidgets.dart';
+import 'package:hogool/widgets/dilog_error.dart';
+
+import '../widgets/dilog_loading.dart';
 
 
 class SignInScreen extends StatelessWidget {
   static String signInScreen ="/signIn";
   var formKay=GlobalKey<FormState>();
+  var modelView=SignInModelView();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +39,6 @@ class SignInScreen extends StatelessWidget {
                   fontSize: 30,
                   fontWeight: FontWeight.bold
                 ),
-
                 )
               ],
             ),
@@ -46,9 +51,9 @@ class SignInScreen extends StatelessWidget {
                     key:formKay,
                     child: Column(
                       children: [
-                        CustomWidget.fieldFormWidget(true, testStirng, "اسم المستخدم", SignInModelView.valdatitor, false, TextInputType.name),
+                        CustomWidget.fieldFormWidget(true, testStirng, "اسم المستخدم", modelView.valdatitorUserName, false, TextInputType.name),
                         SizedBox(height: 30),
-                         CustomWidget.fieldFormWidget(false, testStirng, "كلمة المرور", SignInModelView.valdatitor, true, TextInputType.text),
+                         CustomWidget.fieldFormWidget(false, testStirng, "كلمة المرور", modelView.valdatitorPassword, true, TextInputType.text),
                          SizedBox(height: 100,),
                          Container(
                             width: double.infinity,
@@ -61,8 +66,13 @@ class SignInScreen extends StatelessWidget {
                                 ))
                               ),
                               onPressed: (){
-                                if (formKay.currentState!.validate()){
-                                Navigator.of(context).pushNamed(HomeNav.route);
+                                if (formKay.currentState!.validate()) {
+                                   showDialog(
+    barrierDismissible:false ,
+    context:context, builder: ((context) {
+    return LoadingDilog(title: "جاري تسجيل الدخول",);
+    }));
+                               var token= modelView.SignIn(context);
                                    
                                   //////write backend code here
                               }

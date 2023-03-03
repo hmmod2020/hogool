@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hogool/model/new_screen_viewModel.dart';
+
 
 
 class NewScreen extends StatelessWidget {
 
-var viewModel=newViewModel();
 
 
   @override

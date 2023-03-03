@@ -6,11 +6,11 @@ import '../UI/land_screen.dart';
 
 class CardInvestmentOffer extends StatelessWidget {
 
-int id;
-String titel;
-int yield;
-int duration;
-String description;
+int? id;
+String? titel;
+int? yield;
+int? duration;
+String? description;
 
 CardInvestmentOffer({ required this.titel,required this.yield,required this.duration,required this.description,required this.id});
 
@@ -52,7 +52,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height:10 ,),
-                    Text(titel,
+                    Text(titel!,
                     style: TextStyle(
                       fontSize: 19,
                       fontWeight: FontWeight.bold,
@@ -103,7 +103,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                     SizedBox(height: 10,),
                     Expanded(
                       flex: 60,
-                      child: Text(description+"...",
+                      child: Text(description!+"...",
                       style: TextStyle(
                         fontSize: 13
                       ),

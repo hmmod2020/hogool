@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/farmer_info_Screen.dart';
-import 'package:hogool/model/card_farmer_model.dart';
+import 'package:hogool/model/farmer_model.dart';
 import 'package:hogool/widgets/card_farmer_home.dart';
 
+import '../model/card_farmer_model.dart';
 import '../widgets/custom_fillter_dilog_farmer.dart';
 
 class FarmerSearchScreen extends StatelessWidget {

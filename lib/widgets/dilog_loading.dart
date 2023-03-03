@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class LoadingDilog extends StatelessWidget {
-  
+   String? title;
+  LoadingDilog({this.title});
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -29,7 +30,7 @@ class LoadingDilog extends StatelessWidget {
            ),
            Container(
             margin: EdgeInsets.only(top: 30),
-             child: Text("جاري انشاء حسابك على حقول",
+             child: Text(title.toString(),
              style: TextStyle(
               color: Color(0xff4CAF50),
               fontSize:20,

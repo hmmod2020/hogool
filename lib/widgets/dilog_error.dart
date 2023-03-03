@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class ErrorDilog extends StatelessWidget {
-  
+  String? title;
+  ErrorDilog({this.title});
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -29,7 +30,7 @@ class ErrorDilog extends StatelessWidget {
            ),
            Container(
             margin: EdgeInsets.only(top: 30),
-             child: Text("خطأ! اسم المستخدم او البريد الاكتروني مستخدم",
+             child: Text(title.toString(),
              style: TextStyle(
               color: Color(0xff4CAF50),
               fontSize:17,

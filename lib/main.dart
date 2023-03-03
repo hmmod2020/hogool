@@ -37,7 +37,7 @@ void main() {
     Locale('ar','AE'), // Arabic
   ],
       debugShowCheckedModeBanner: false,
-      home:Test(),
+      home:WelcomeScreen(),
       routes: {
         "/signUpAs":(context) => SingUpAs(),
         "/welcomePage":(context) => WelcomeScreen(),

@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import '../UI/new_screen.dart';
 
 class CardNewHome extends StatelessWidget {
-  int id ;
-  String titleNew;
-  String description;
+  int? id ;
+  String? titleNew;
+  String? description;
 
      CardNewHome({required this.id,super.key, required this.titleNew,required this.description});
   @override
@@ -36,7 +36,7 @@ class CardNewHome extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(width: 30),
-                  Text(titleNew ,
+                  Text(titleNew! ,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
@@ -51,7 +51,7 @@ class CardNewHome extends StatelessWidget {
               flex:45 ,
               child: Padding(
                 padding: const EdgeInsets.only(left: 10,right: 10),
-                child: Text(description+"..."),
+                child: Text(description!+"..."),
               ),
             ),
             Expanded(

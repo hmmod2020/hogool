@@ -1,14 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/land_search.dart';
-import 'package:hogool/model/card_land_model.dart';
+import 'package:hogool/model/land_model.dart';
 
 import '../UI/land_screen.dart';
+import '../model/card_land_model.dart';
 
 
 class CardRentLand extends StatelessWidget {
 
-  LandData data ;
+ LandData data ;
 CardRentLand({required this.data});
 
   @override
@@ -32,7 +33,7 @@ CardRentLand({required this.data});
                     flex: 2,
                     child:Container(
                       margin: EdgeInsets.only(right: 12,top: 10),
-                      child: Text(data.title,
+                      child: Text(data.title.toString(),
                       style: TextStyle(
                       
                         color: Color(0xff4CAF50),
@@ -61,7 +62,7 @@ CardRentLand({required this.data});
               flex: 5,
               child:Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text( data.description+"..."),
+                child: Text( data.description!+"..."),
               ),
             ),
             Expanded(

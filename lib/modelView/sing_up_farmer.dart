@@ -3,18 +3,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import '../model/sign_up_model.dart';
-import '../network/signUp_service.dart';
+import '../network/network_service.dart';
 import '../widgets/dilog_done.dart';
 import '../widgets/dilog_error.dart';
 
 class SignUPFarmerModelView {
 var userData=SignUpModel();
-late SignUpServeics server;
+late NetworkServeics server;
+
 
  SignUPFarmerModelView(){
 userData.accountType="farmer";
-server =new SignUpServeics();
+server =new NetworkServeics();
 }
+
 String tempPassword="";
 
 
@@ -106,7 +108,7 @@ Navigator.of(context).pop();
   showDialog(
     barrierDismissible:true ,
     context:context, builder: ((context) {
-    return ErrorDilog();
+    return ErrorDilog(title: "خطأ كلمة المرور او البريد الالكتروني مستخدم",);
     }));
 }
 }

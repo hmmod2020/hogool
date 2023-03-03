@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CardFarmerHome extends StatelessWidget {
- int id;
- String image;
- String farmerName;
- String location;
- int exepiernce;
- List<String> crops;
+ int? id;
+ String? image;
+ String? farmerName;
+ String? location;
+ int? exepiernce;
+ List<String>? crops;
 Widget screenRoute;
  CardFarmerHome({required this.id,required this.image,required this.farmerName,required this.location,required this.exepiernce,required this.crops, required this.screenRoute});
 
@@ -30,7 +30,7 @@ Widget screenRoute;
                height: double.infinity,
                 child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
-          child: Image.asset(image,
+          child: Image.asset(image!,
           fit: BoxFit.fill,
           ),
       ),
@@ -48,7 +48,7 @@ Widget screenRoute;
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                           Text(farmerName,
+                           Text(farmerName!,
                            style: TextStyle(
                             color: Color(0xff4CAF50),
                             fontWeight: FontWeight.bold,
@@ -69,7 +69,7 @@ Widget screenRoute;
                           Row(
                             children: [
                               Text("الموقع : "),
-                              Text(location),
+                              Text(location!),
                             ],
                           ),
                           Row(
@@ -83,9 +83,9 @@ Widget screenRoute;
                           Row(
                             children: [
                               Text(" المحاصيل : "),
-                              Text(crops[0]+" "+", "),
-                              Text(crops[1]+" "+", "),
-                              Text(crops[2]+"  "),
+                              Text(crops![0]+" "+", "),
+                              Text(crops![1]+" "+", "),
+                              Text(crops![2]+"  "),
                             ],
                           ),
                         ],
