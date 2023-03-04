@@ -13,6 +13,7 @@ FarmerModel({required this.farmer_id,required this.full_name,required this.descr
 FarmerModel.fromJson(Map <String ,dynamic> json){
 farmer_id=json["farmer_id"];
 full_name=json["full_name"];
+experince=json["experince"];
 description=json["description"];
 profile_photo=json["profile_photo"];
 location=json["location"];

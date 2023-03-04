@@ -144,5 +144,32 @@ return "Error";
 }
 }
 
+getAllFarmer() async{
+  dio.options.headers["Authorization"] = "Token ${DataManeger.getToken()}";
+  var response;
+  
+   List<FarmerModel>farmers=[];
+try{
+final response = await dio.get(
+    DataManeger.base_url+'show_farmer/0/',
+    );
+if(response.statusCode==200){
+  
+  for(var list in response.data){
+    farmers.add(FarmerModel.fromJson(list));
+  }
+
+
+return farmers;
+    }else{
+
+      return response.statusMessage.toString();
+    }
+
+}catch(e){
+  print(e.toString());
+return "Error";
+}
+}
   
 }

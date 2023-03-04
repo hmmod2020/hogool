@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/farmer_info_Screen.dart';
 import 'package:hogool/model/farmer_model.dart';
+import 'package:hogool/modelView/farmers_screen_modelView.dart';
 import 'package:hogool/widgets/card_farmer_home.dart';
+import 'package:lottie/lottie.dart';
 
 import '../model/card_farmer_model.dart';
 import '../widgets/custom_fillter_dilog_farmer.dart';
 
 class FarmerSearchScreen extends StatelessWidget {
-
+var modelVeiw=FarmersModelView();
 List<cardFarmerModel> dataTest=[];  
 
 FarmerSearchScreen(){
@@ -20,6 +22,7 @@ FarmerSearchScreen(){
           crops: [
             "الذرة", "القمح","البطاطس"
           ],
+          
           image: "mohammed.jpg",),);
            dataTest.add(cardFarmerModel(
           id: 0,
@@ -100,18 +103,26 @@ static String farmerScreen="/farmerScreen";
             child: searchScreen(context)),
            SizedBox(height: 20,),
            Expanded(
-             child:ListView.builder(
-              itemCount: dataTest.length,
+             child:FutureBuilder(
+              future: modelVeiw.getAllFarmers(),
+              builder: ((context, snapshot) {
+               if(snapshot.hasData){
+                return ListView.builder(
+              itemCount: snapshot.data!.length.toInt(),
               itemBuilder:(context, index) {
-               return CardFarmerHome(id: dataTest[index].id,image: 
-                dataTest[index].image,exepiernce: dataTest[index].exepiernce,
-                farmerName: dataTest[index].farmerName,
+               return CardFarmerHome(id: snapshot.data![index].farmer_id,image: 
+                dataTest[index].image,exepiernce: snapshot.data![index].experince,
+                farmerName: snapshot.data![index].full_name,
                 crops:dataTest[index].crops,
-                location: dataTest[index].location,
+                location: snapshot.data![index].location,
                 screenRoute:FarmerInfoScreen(),
                 );
               },
-              ) 
+              );
+               }else{
+                return Lottie.asset("assets/loader.json",repeat: true);
+               }
+             })),
            ),
           ],
         ) ,
@@ -182,3 +193,17 @@ static String farmerScreen="/farmerScreen";
     );
   }
 }
+
+
+// ListView.builder(
+//               itemCount: dataTest.length,
+//               itemBuilder:(context, index) {
+//                return CardFarmerHome(id: dataTest[index].id,image: 
+//                 dataTest[index].image,exepiernce: dataTest[index].exepiernce,
+//                 farmerName: dataTest[index].farmerName,
+//                 crops:dataTest[index].crops,
+//                 location: dataTest[index].location,
+//                 screenRoute:FarmerInfoScreen(),
+//                 );
+//               },
+//               ),
