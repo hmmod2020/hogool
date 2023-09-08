@@ -43,6 +43,16 @@ dependencies:
   animation_list: ^2.2.1
   multi_dropdown: ^1.0.6
   dio: ^5.0.1
+  equatable:
+  dartz: 
+  flutter_bloc: 
+  get_it:
+  animate_do: 
+  cached_network_image: 
+  google_fonts:
+  shimmer:
+  internet_connection_checker_plus: ^1.0.1
+  
 
 dev_dependencies:
   flutter_test:

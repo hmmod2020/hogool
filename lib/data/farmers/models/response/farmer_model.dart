@@ -1,21 +1,27 @@
 
-class FarmerModel{
- int? farmer_id;
- String? full_name ;
- String? description;
- int? experince;
- String? profile_photo;
- String? location;
- bool? avalability_for_job;
 
-FarmerModel({required this.farmer_id,required this.full_name,required this.description,required this.experince,
-required this.profile_photo,required this.location,required this.avalability_for_job});
+// ignore: must_be_immutable
+import '../../../../domain/farmers/entities/farmerEntity.dart';
+
+class FarmerModel extends FarmerEntity{
+
+
+FarmerModel({
+required super.farmer_id,
+required super.full_name,
+required super.description,
+required super.experince,
+required super.profile_photo,
+required super.location,
+required super.phone,
+required super.avalability_for_job});
 
 FarmerModel.fromJson(Map <String ,dynamic> json){
 farmer_id=json["farmer_id"];
 full_name=json["full_name"];
 experince=json["experince"];
 description=json["description"];
+phone=json["phone"];
 profile_photo=json["profile_photo"];
 location=json["location"];
 avalability_for_job=json["avalability_for_job"];
@@ -27,6 +33,7 @@ Map<String,dynamic>toJSON( ){
     "farmer_id":farmer_id,
     "full_name":full_name,
     "location":location,
+    "phone":phone,
     "experince":experince,
     "profile_photo":profile_photo,
     "location":location,
