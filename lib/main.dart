@@ -19,6 +19,7 @@ import 'UI/projects_screen.dart';
 import 'UI/sign_up_farmer.dart';
 import 'UI/testScreen.dart';
 import 'UI/welcome_screen.dart';
+import 'core/themes/app_color.dart';
 
 
 void main() {
@@ -26,7 +27,7 @@ void main() {
     CupertinoApp(
       theme: CupertinoThemeData(
         
-        primaryColor: Color(0xff4CAF50),
+        primaryColor: AppColor.primaryColor,
       ),
       localizationsDelegates: [
     GlobalMaterialLocalizations.delegate,

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/farmer_search_screen.dart';
 
+import '../core/themes/app_color.dart';
 import 'card_farmer_home.dart';
 
 
@@ -40,7 +41,7 @@ class ShowHomeWidget extends StatelessWidget {
                   margin: EdgeInsets.only(left: 25),
                     child:Text("عرض الكل",
                          style: TextStyle(
-                    color: Color(0xff4CAF50),
+                    color: AppColor.primaryColor,
                     fontSize: 17,
                     fontWeight: FontWeight.bold
                          ),

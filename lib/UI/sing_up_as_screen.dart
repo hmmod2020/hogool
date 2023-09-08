@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/sign_up_farmer.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
+import '../core/themes/app_color.dart';
 import '../network/global_data.dart';
 class SingUpAs extends StatelessWidget{
 static String signUpAs="/signUpAs";
@@ -21,9 +23,9 @@ static String signUpAs="/signUpAs";
             flex: 8,
             child: Column(
               children: [
-             BottonStart("مزارع",context,SingUpFarmer.singUpFarmer),
-             BottonStart("مستثمر",context,SingUpFarmer.singUpFarmer),
-             BottonStart("مالك اراضي",context,SingUpFarmer.singUpFarmer),
+             BottonStart(AppString.farmer,context,SingUpFarmer.singUpFarmer),
+             BottonStart(AppString.investor,context,SingUpFarmer.singUpFarmer),
+             BottonStart(AppString.landOner,context,SingUpFarmer.singUpFarmer),
               ],
             )),
           Expanded(
@@ -48,7 +50,7 @@ Widget BottonStart(String textButton,BuildContext context,String path){
                 child:Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color:  Color(0xff4CAF50),
+                    color:  AppColor.primaryColor,
                     borderRadius: BorderRadius.all(Radius.circular(10))
                   ),
                   margin: EdgeInsets.only(left: 20,right: 20,top:45,bottom: 45),

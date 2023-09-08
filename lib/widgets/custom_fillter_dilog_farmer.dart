@@ -8,6 +8,8 @@ import 'package:multi_dropdown/widgets/hint_text.dart';
 import 'package:multi_dropdown/widgets/selection_chip.dart';
 import 'package:multi_dropdown/widgets/single_selected_item.dart';
 
+import '../core/themes/app_color.dart';
+
 class FillterFarmerSearchDilog extends StatelessWidget {
    String _groupVal="الخرطوم";
 
@@ -34,7 +36,7 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                     child: Text("فلترة البحث"
                     ,style: TextStyle(
                       fontSize: 25,
-                      color:Color(0xff4CAF50),
+                      color:AppColor.primaryColor,
                       fontWeight: FontWeight.bold
                     ),
                     ),
@@ -61,14 +63,14 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                   children: [
                     MultiSelectDropDown(
           chipConfig: ChipConfig(
-            backgroundColor: Color(0xff4CAF50)
+            backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
           optionsBackgroundColor:Colors.white,
-          selectedOptionTextColor: Color(0xff4CAF50),
+          selectedOptionTextColor: AppColor.primaryColor,
           selectedOptionIcon: Icon(
             Icons.check,
-            color: Color(0xff4CAF50)
+            color: AppColor.primaryColor
             ,
           ),
           backgroundColor: Colors.white,
@@ -90,13 +92,13 @@ class FillterFarmerSearchDilog extends StatelessWidget {
         Text("الموقع : ",
         style: TextStyle(
           fontSize: 25,
-          color: Color(0xff4CAF50),
+          color: AppColor.primaryColor,
         ),
         ),
         StatefulBuilder(builder: ((context, setState) {
           return Theme(
             data: Theme.of(context).copyWith(
-              toggleableActiveColor: Color(0xff4CAF50)
+              toggleableActiveColor: AppColor.primaryColor
             ),
             child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -105,7 +107,7 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                       Row(
                         children: [
                           Radio(
-                            focusColor: Color(0xff4CAF50),
+                            focusColor: AppColor.primaryColor,
                             value:"الخرطوم" , groupValue: _groupVal, onChanged:((value) {
                               setState((){
                               _groupVal=value.toString();
@@ -113,7 +115,7 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                           })),
                           Text("الخرطوم",
                           style: TextStyle(
-                            color: Color(0xff4CAF50),
+                            color: AppColor.primaryColor,
                             
                           ),
                           )
@@ -130,7 +132,7 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                           })),
                           Text("بحري",
                           style: TextStyle(
-                            color: Color(0xff4CAF50),
+                            color: AppColor.primaryColor,
                             
                           ),
                           )
@@ -146,7 +148,7 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                           })),
                           Text("امدرمان",
                           style: TextStyle(
-                            color: Color(0xff4CAF50),
+                            color: AppColor.primaryColor,
                             
                           ),
                           )
@@ -166,7 +168,7 @@ class FillterFarmerSearchDilog extends StatelessWidget {
               height: 50,
               child: TextButton(
                               style: ButtonStyle(
-                                backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)
                                 ))

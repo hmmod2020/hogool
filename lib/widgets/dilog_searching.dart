@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import '../core/themes/app_color.dart';
+
 class SearchingDilog extends StatelessWidget {
   
   @override
@@ -31,7 +33,7 @@ class SearchingDilog extends StatelessWidget {
             margin: EdgeInsets.only(top: 30),
              child: Text("جاري البحث",
              style: TextStyle(
-              color: Color(0xff4CAF50),
+              color: AppColor.primaryColor,
               fontSize:20,
               fontWeight: FontWeight.bold
              ),

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
 import 'account_farmer.dart';
 import 'account_screen.dart';
 import 'farmer_search_screen.dart';
@@ -33,7 +34,7 @@ var listOfKeys=[firstTabNavKey,secondTabNavKey,thirdTabNavKey,fourthTabNavKey];
         tabBar:CupertinoTabBar(
           
           backgroundColor: Colors.white,
-          activeColor: Color(0xff4CAF50),
+          activeColor: AppColor.primaryColor,
           inactiveColor: Colors.black,
           items:const<BottomNavigationBarItem> [
      BottomNavigationBarItem(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
+
 class CardInvesmentSelected extends StatelessWidget {
   const CardInvesmentSelected({super.key});
 
@@ -9,7 +11,8 @@ class CardInvesmentSelected extends StatelessWidget {
          height: 220, 
          decoration: BoxDecoration(
           borderRadius:BorderRadius.all(Radius.circular(20)),
-          color:Color(0xffF0F9F1),
+          color:AppColor.fillInputColor,
+          
           ),
           child:Padding(
             padding: const EdgeInsets.only(left: 10,right: 10),
@@ -22,7 +25,7 @@ class CardInvesmentSelected extends StatelessWidget {
                     SizedBox(width: 8,),
                     Text("الخرطوم",
                     style:TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 18,
                     ),
                     )
@@ -33,14 +36,14 @@ class CardInvesmentSelected extends StatelessWidget {
                   children: [
                      Text("اسم المشروع",
                     style:TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 18,
                     ),
                     ),
                     SizedBox(width: 8,),
                     Text("مشروع زراعي سوبا",
                     style:TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 15,
                     ),
                     )
@@ -51,14 +54,14 @@ class CardInvesmentSelected extends StatelessWidget {
                   children: [
                      Text("طريقة الري",
                     style:TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 18,
                     ),
                     ),
                     SizedBox(width: 8,),
                     Text("مشروع زراعي سوبا",
                     style:TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 15,
                     ),
                     )
@@ -71,7 +74,7 @@ class CardInvesmentSelected extends StatelessWidget {
                         width: 120,
                         child: TextButton(
                                   style: ButtonStyle(
-                                    backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                    backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15)
                                     ))
@@ -117,7 +120,7 @@ class CardInvesmentSelected extends StatelessWidget {
           //           SizedBox(width: 15,),
           //           Text("أختر المشروع ",
           //           style: TextStyle(
-          //             color: Color(0xff4CAF50),
+          //             color: AppColor.primaryColor,
           //             fontSize: 25
           //           ),
           //           )

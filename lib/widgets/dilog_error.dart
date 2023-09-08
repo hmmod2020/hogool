@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import '../core/themes/app_color.dart';
+
 class ErrorDilog extends StatelessWidget {
   String? title;
   ErrorDilog({this.title});
@@ -32,7 +34,7 @@ class ErrorDilog extends StatelessWidget {
             margin: EdgeInsets.only(top: 30),
              child: Text(title.toString(),
              style: TextStyle(
-              color: Color(0xff4CAF50),
+              color: AppColor.primaryColor,
               fontSize:17,
               fontWeight: FontWeight.bold
              ),

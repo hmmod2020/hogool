@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/homeNav.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:hogool/modelView/sign_in_modelView.dart';
 import 'package:hogool/network/global_data.dart';
 import 'package:hogool/network/network_service.dart';
 import 'package:hogool/widgets/customWidgets.dart';
 import 'package:hogool/widgets/dilog_error.dart';
 
+import '../core/themes/app_color.dart';
 import '../widgets/dilog_loading.dart';
 
 
@@ -33,9 +35,9 @@ class SignInScreen extends StatelessWidget {
                                 ),
                 ),
                 SizedBox(height: 20,),
-                Text("تسجيل الدخول ",
+                Text(AppString.login,
                 style: TextStyle(
-                  color: Color(0xff4CAF50),
+                  color: AppColor.primaryColor,
                   fontSize: 30,
                   fontWeight: FontWeight.bold
                 ),
@@ -51,16 +53,16 @@ class SignInScreen extends StatelessWidget {
                     key:formKay,
                     child: Column(
                       children: [
-                        CustomWidget.fieldFormWidget(true, testStirng, "اسم المستخدم", modelView.valdatitorUserName, false, TextInputType.name),
+                        CustomWidget.fieldFormWidget(true, testStirng, AppString.userName, modelView.valdatitorUserName, false, TextInputType.name),
                         SizedBox(height: 30),
-                         CustomWidget.fieldFormWidget(false, testStirng, "كلمة المرور", modelView.valdatitorPassword, true, TextInputType.text),
+                         CustomWidget.fieldFormWidget(false, testStirng, AppString.password, modelView.valdatitorPassword, true, TextInputType.text),
                          SizedBox(height: 100,),
                          Container(
                             width: double.infinity,
                             height: 70,
                              child: TextButton(
                               style: ButtonStyle(
-                                backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)
                                 ))
@@ -70,14 +72,14 @@ class SignInScreen extends StatelessWidget {
                                    showDialog(
     barrierDismissible:false ,
     context:context, builder: ((context) {
-    return LoadingDilog(title: "جاري تسجيل الدخول",);
+    return LoadingDilog(title: AppString.loadinLogin,);
     }));
                                var token= modelView.SignIn(context);
                                    
                                   //////write backend code here
                               }
                               },
-                               child: Text("تسجيل الدخول ",
+                               child: Text(AppString.login,
                                style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 22,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
+
 
 
 class NewScreen extends StatelessWidget {
@@ -24,7 +26,7 @@ class NewScreen extends StatelessWidget {
                   child: Text("أحدث الأخبار",
                   style: TextStyle(
                     fontSize: 30,
-                    color: Color(0xff4CAF50),
+                    color: AppColor.primaryColor,
                     fontWeight: FontWeight.bold
                   ),
                   )),

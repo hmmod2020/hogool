@@ -2,8 +2,10 @@ import 'package:chopper/chopper.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/sing_in_farmer.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:hogool/model/sign_up_model.dart';
 import 'package:hogool/widgets/dilog_done.dart';
+import '../core/themes/app_color.dart';
 import '../widgets/dilog_error.dart';
 import '../modelView/sing_up_farmer.dart';
 import '../widgets/customWidgets.dart';
@@ -28,10 +30,9 @@ static String singUpFarmer ="/singUpFarmer";
               Container(
                margin: EdgeInsets.only(top: 25),
                 child: Center(
-                 child:Text(
-                   "تسجيل حساب المزارع ",
-                   style: TextStyle(
-                     color: Color(0xff4CAF50),
+                 child:Text(AppString.signUpFarmer,
+                                    style: TextStyle(
+                     color: AppColor.primaryColor,
                      fontSize: 30,
                      fontWeight:FontWeight.bold ),
                  ),),
@@ -43,22 +44,22 @@ static String singUpFarmer ="/singUpFarmer";
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        CustomWidget.fieldFormWidget(true,testStirng,"الإسم",modelView.nameIsValid,false,TextInputType.name),
+                        CustomWidget.fieldFormWidget(true,testStirng,AppString.name,modelView.nameIsValid,false,TextInputType.name),
                         SizedBox(height:30),
-                         CustomWidget.fieldFormWidget(false,testStirng,"اسم المستخدم",modelView.userNameIsValid,false,TextInputType.name),
+                         CustomWidget.fieldFormWidget(false,testStirng,AppString.login,modelView.userNameIsValid,false,TextInputType.name),
                          SizedBox(height:30),
-                         CustomWidget.fieldFormWidget(false,testStirng,"البريد الإلكتروني",modelView.emailIsValid,false,TextInputType.emailAddress),
+                         CustomWidget.fieldFormWidget(false,testStirng,AppString.email,modelView.emailIsValid,false,TextInputType.emailAddress),
                          SizedBox(height:30),
-                         CustomWidget.fieldFormWidget(false,testStirng,"كلمة المرور ",modelView.passwordIsValid,true,TextInputType.name),
+                         CustomWidget.fieldFormWidget(false,testStirng,AppString.password,modelView.passwordIsValid,true,TextInputType.name),
                          SizedBox(height:30),
-                         CustomWidget.fieldFormWidget(false,testStirng,"تأكيد كلمة المرور",modelView.RepasswordIsValid,true,TextInputType.name),
+                         CustomWidget.fieldFormWidget(false,testStirng,AppString.v_password,modelView.RepasswordIsValid,true,TextInputType.name),
                          SizedBox(height:30),
                          Container(
                           width: double.infinity,
                           height: 60,
                            child: TextButton(
                             style: ButtonStyle(
-                              backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                              backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                               shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)
                               ))
@@ -68,12 +69,12 @@ static String singUpFarmer ="/singUpFarmer";
                                   showDialog(
     barrierDismissible:false ,
     context:context, builder: ((context) {
-    return LoadingDilog(title: "جاري تسجيل الحساب",);
+    return LoadingDilog(title: AppString.loadingSignUp,);
     }));
                                   modelView.signUp(context);
                               }
                             },
-                             child: Text("تسجيل الحساب",
+                             child: Text(AppString.signUp,
                              style: TextStyle(
                               color: Colors.white,
                               fontSize: 22,
@@ -88,9 +89,9 @@ static String singUpFarmer ="/singUpFarmer";
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                               InkWell(
-                                child:Text("قم بتسجيل الدخول ",
+                                child:Text(AppString.plzSignIn,
                                 style: TextStyle(
-                                  color:  Color(0xff4CAF50),
+                                  color:  AppColor.primaryColor,
                                   fontSize: 20,
                                 ),
                                 ) ,
@@ -99,7 +100,7 @@ static String singUpFarmer ="/singUpFarmer";
                                 },
                               ),
                               Text(
-                              "لديك حساب ؟ ",
+                              AppString.doYouHaveAccount,
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 20,

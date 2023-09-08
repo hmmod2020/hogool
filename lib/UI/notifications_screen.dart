@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:hogool/core/themes/app_color.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
+import '../core/utils/app_string.dart';
 import '../widgets/card_notifications.dart';
 
 
@@ -21,10 +23,10 @@ class NotificationScreen extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text("الإشعارات",
+                  Text(AppString.notification,
                         style: TextStyle(
                           fontSize: 40,
-                          color: Color(0xff4CAF50),
+                          color: AppColor.primaryColor,
                           fontWeight: FontWeight.bold
                         ),
                         ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
+
 class LandScreen extends StatelessWidget {
  
 
@@ -133,7 +135,7 @@ SizedBox(width: 10,),
                                   children: [
                                     Text("مدة الايجار:",
                                     style: TextStyle(
-                                      color: Color(0xff4CAF50),
+                                      color: AppColor.primaryColor,
                                       fontSize: 15
                                     ),
                                     ),
@@ -156,7 +158,7 @@ SizedBox(width: 10,),
                                   children: [
                                       Text("طريقة الري :",
                                     style: TextStyle(
-                                      color: Color(0xff4CAF50),
+                                      color: AppColor.primaryColor,
                                       fontSize: 15
                                     ),
                                     ),
@@ -220,7 +222,7 @@ SizedBox(width: 10,),
                 height: 60,
                 child: TextButton(
                               style: ButtonStyle(
-                                backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)
                                 ))
