@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hogool/UI/new_screen.dart';
 
 import '../UI/land_screen.dart';
+import '../core/themes/app_color.dart';
 
 class CardInvestmentOffer extends StatelessWidget {
 
@@ -25,7 +26,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
         ),
       margin: EdgeInsets.only(right: 15,left: 15),
       child: Card(
-        color: Color(0xffF0F9F1),
+        color: AppColor.fillInputColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
@@ -56,7 +57,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                     style: TextStyle(
                       fontSize: 19,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xff4CAF50)
+                      color: AppColor.primaryColor
                     ),
                     ),
                     SizedBox(height:15,),
@@ -118,7 +119,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                             margin: EdgeInsets.only(left: 15,bottom: 5),
                             child: TextButton(
                             style: ButtonStyle(
-                              backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                              backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                               shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)
                               ))

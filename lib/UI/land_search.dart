@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hogool/model/land_model.dart';
 import 'package:hogool/widgets/card_rent_land.dart';
 
+import '../core/themes/app_color.dart';
 import '../model/card_land_model.dart';
 
 class LandsScreen extends StatelessWidget {
@@ -68,22 +69,22 @@ LandData(title: "ارض زراعية للايجار السنوي", description: 
               
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.search,
-                color: Color(0xff4CAF50),
+                color: AppColor.primaryColor,
                 ),
                             hintText: "قم بالبحث عن أرض ",
                             hintTextDirection: TextDirection.rtl,
                             filled: true,
-                            fillColor: Color(0xffF0F9F1),
+                            fillColor: AppColor.fillInputColor,
                             enabledBorder:  OutlineInputBorder( 
                               borderSide: BorderSide(
-                                color: Color(0xffF0F9F1),
+                                color: AppColor.fillInputColor,
                               ), 
                               borderRadius: BorderRadius.all(Radius.circular(15)),
                             ),
                             focusedBorder: OutlineInputBorder(  
                               borderRadius: BorderRadius.all(Radius.circular(15),),
                               borderSide: BorderSide(
-                                color: Color(0xffF0F9F1)
+                                color: AppColor.fillInputColor
                               )
                             ), 
                           ),
@@ -95,14 +96,14 @@ LandData(title: "ارض زراعية للايجار السنوي", description: 
               width: double.infinity,
               height: 70,
               decoration: BoxDecoration(
-                color: Color(0xffF0F9F1),
+                color: AppColor.fillInputColor,
                 borderRadius: BorderRadius.all(Radius.circular(15)),
                 
               ),
               child: InkWell(
                 child: Icon(
                   Icons.filter_alt_outlined,
-                  color: Color(0xff4CAF50),
+                  color: AppColor.primaryColor,
                 ),
                 onTap: (){},
               ),

@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 import '../UI/new_screen.dart';
+import '../core/themes/app_color.dart';
 
 class CardNewHome extends StatelessWidget {
   int? id ;
@@ -26,7 +27,7 @@ class CardNewHome extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
-        color:Color(0xffF0F9F1),
+        color:AppColor.fillInputColor,
         
         child: Column(
           children: [
@@ -62,7 +63,7 @@ class CardNewHome extends StatelessWidget {
                             height: 40,
                              child: TextButton(
                               style: ButtonStyle(
-                                backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)
                                 ))

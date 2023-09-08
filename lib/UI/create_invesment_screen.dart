@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
+import '../core/themes/app_color.dart';
+
 class CreateInvesmentScreen extends StatelessWidget {
   var decInv=TextEditingController();
   var decLand=TextEditingController();
@@ -23,7 +25,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   children: [
                     Text("إنشاء عرض استثماري",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 35,
                       fontWeight: FontWeight.bold
                     ),
@@ -36,7 +38,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   children: [
                     Text("وصف العرض : ",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 20
                     ),
                     ),
@@ -50,18 +52,18 @@ class CreateInvesmentScreen extends StatelessWidget {
                     decoration: InputDecoration(
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
-                                fillColor: Color(0xffF0F9F1),
+                                fillColor: AppColor.fillInputColor,
                                 enabledBorder:  OutlineInputBorder( 
                                   
                                   borderSide: BorderSide(
-                                    color: Color(0xffF0F9F1),
+                                    color: AppColor.fillInputColor,
                                   ), 
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
                                 ),
                                 focusedBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Color(0xffF0F9F1)
+                                    color: AppColor.fillInputColor
                                   )
                                 ),
                                 errorBorder: OutlineInputBorder(  
@@ -83,7 +85,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   children: [
                     Text("وصف الارض : ",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 20
                     ),
                     ),
@@ -97,18 +99,18 @@ class CreateInvesmentScreen extends StatelessWidget {
                     decoration: InputDecoration(
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
-                                fillColor: Color(0xffF0F9F1),
+                                fillColor: AppColor.fillInputColor,
                                 enabledBorder:  OutlineInputBorder( 
                                   
                                   borderSide: BorderSide(
-                                    color: Color(0xffF0F9F1),
+                                    color: AppColor.fillInputColor,
                                   ), 
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
                                 ),
                                 focusedBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Color(0xffF0F9F1)
+                                    color: AppColor.fillInputColor
                                   )
                                 ),
                                 errorBorder: OutlineInputBorder(  
@@ -130,7 +132,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   children: [
                     Text("نوع الري  : ",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 20
                     ),
                     ),
@@ -143,17 +145,17 @@ class CreateInvesmentScreen extends StatelessWidget {
                   child: MultiSelectDropDown(
                     selectionType: SelectionType.single,
           chipConfig: ChipConfig(
-            backgroundColor: Color(0xff4CAF50)
+            backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
           optionsBackgroundColor:Colors.white,
-          selectedOptionTextColor: Color(0xff4CAF50),
+          selectedOptionTextColor: AppColor.primaryColor,
           selectedOptionIcon: Icon(
             Icons.check,
-            color: Color(0xff4CAF50)
+            color: AppColor.primaryColor
             ,
           ),
-          backgroundColor: Color(0xffF0F9F1),
+          backgroundColor: AppColor.fillInputColor,
           dropdownHeight: 180.0,
           hint: "النوع",
           onOptionSelected: ((selectedOptions) {
@@ -172,7 +174,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   children: [
                     Text("الموقع   : ",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 20
                     ),
                     ),
@@ -185,17 +187,17 @@ class CreateInvesmentScreen extends StatelessWidget {
                   child: MultiSelectDropDown(
                     selectionType: SelectionType.single,
           chipConfig: ChipConfig(
-            backgroundColor: Color(0xff4CAF50)
+            backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
           optionsBackgroundColor:Colors.white,
-          selectedOptionTextColor: Color(0xff4CAF50),
+          selectedOptionTextColor: AppColor.primaryColor,
           selectedOptionIcon: Icon(
             Icons.check,
-            color: Color(0xff4CAF50)
+            color: AppColor.primaryColor
             ,
           ),
-          backgroundColor: Color(0xffF0F9F1),
+          backgroundColor: AppColor.fillInputColor,
           dropdownHeight: 180.0,
           hint: "الموقع",
           onOptionSelected: ((selectedOptions) {
@@ -214,7 +216,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   children: [
                     Text("مدة الاستثمار    : ",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 20
                     ),
                     ),
@@ -227,18 +229,18 @@ class CreateInvesmentScreen extends StatelessWidget {
                     decoration: InputDecoration(
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
-                                fillColor: Color(0xffF0F9F1),
+                                fillColor: AppColor.fillInputColor,
                                 enabledBorder:  OutlineInputBorder( 
                                   
                                   borderSide: BorderSide(
-                                    color: Color(0xffF0F9F1),
+                                    color: AppColor.fillInputColor,
                                   ), 
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
                                 ),
                                 focusedBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Color(0xffF0F9F1)
+                                    color: AppColor.fillInputColor
                                   )
                                 ),
                                 errorBorder: OutlineInputBorder(  
@@ -260,7 +262,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   children: [
                     Text("التمويل : ",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 20
                     ),
                     ),
@@ -273,18 +275,18 @@ class CreateInvesmentScreen extends StatelessWidget {
                     decoration: InputDecoration(
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
-                                fillColor: Color(0xffF0F9F1),
+                                fillColor: AppColor.fillInputColor,
                                 enabledBorder:  OutlineInputBorder( 
                                   
                                   borderSide: BorderSide(
-                                    color: Color(0xffF0F9F1),
+                                    color: AppColor.fillInputColor,
                                   ), 
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
                                 ),
                                 focusedBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Color(0xffF0F9F1)
+                                    color: AppColor.fillInputColor
                                   )
                                 ),
                                 errorBorder: OutlineInputBorder(  
@@ -306,7 +308,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   children: [
                     Text("حالة الارض : ",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 20
                     ),
                     ),
@@ -317,7 +319,7 @@ class CreateInvesmentScreen extends StatelessWidget {
           StatefulBuilder(builder: ((context, setState) {
           return Theme(
             data: Theme.of(context).copyWith(
-              toggleableActiveColor: Color(0xff4CAF50)
+              toggleableActiveColor: AppColor.primaryColor
             ),
             child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -326,7 +328,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                       Row(
                         children: [
                           Radio(
-                            focusColor: Color(0xff4CAF50),
+                            focusColor: AppColor.primaryColor,
                             value:"متاح" , groupValue: _groupVal, onChanged:((value) {
                               setState((){
                               _groupVal=value.toString();
@@ -334,7 +336,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                           })),
                           Text("متاح",
                           style: TextStyle(
-                            color: Color(0xff4CAF50),
+                            color: AppColor.primaryColor,
                             
                           ),
                           )
@@ -351,7 +353,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                           })),
                           Text("غير متاح",
                           style: TextStyle(
-                            color: Color(0xff4CAF50),
+                            color: AppColor.primaryColor,
                             
                           ),
                           )
@@ -367,7 +369,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   children: [
                     Text("مساحة الارض : ",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 20
                     ),
                     ),
@@ -383,18 +385,18 @@ class CreateInvesmentScreen extends StatelessWidget {
                           decoration: InputDecoration(
                                       hintTextDirection: TextDirection.rtl,
                                       filled: true,
-                                      fillColor: Color(0xffF0F9F1),
+                                      fillColor: AppColor.fillInputColor,
                                       enabledBorder:  OutlineInputBorder( 
                                         
                                         borderSide: BorderSide(
-                                          color: Color(0xffF0F9F1),
+                                          color: AppColor.fillInputColor,
                                         ), 
                                         borderRadius: BorderRadius.all(Radius.circular(15)),
                                       ),
                                       focusedBorder: OutlineInputBorder(  
                                         borderRadius: BorderRadius.all(Radius.circular(15),),
                                         borderSide: BorderSide(
-                                          color: Color(0xffF0F9F1)
+                                          color: AppColor.fillInputColor
                                         )
                                       ),
                                       errorBorder: OutlineInputBorder(  
@@ -417,7 +419,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                      children: [
                        Text("  فدان",
                           style: TextStyle(
-                            color: Color(0xff4CAF50),
+                            color: AppColor.primaryColor,
                             fontSize: 25
                           ),
                           ),
@@ -432,7 +434,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                             height: 70,
                              child: TextButton(
                               style: ButtonStyle(
-                                backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)
                                 ))

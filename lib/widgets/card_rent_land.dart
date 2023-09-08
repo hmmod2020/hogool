@@ -4,6 +4,7 @@ import 'package:hogool/UI/land_search.dart';
 import 'package:hogool/model/land_model.dart';
 
 import '../UI/land_screen.dart';
+import '../core/themes/app_color.dart';
 import '../model/card_land_model.dart';
 
 
@@ -22,7 +23,7 @@ CardRentLand({required this.data});
         child: Card(
           shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20))),
-        color:Color(0xffF0F9F1),
+        color:AppColor.fillInputColor,
          child:Column(
           children: [
             Expanded(
@@ -36,7 +37,7 @@ CardRentLand({required this.data});
                       child: Text(data.title.toString(),
                       style: TextStyle(
                       
-                        color: Color(0xff4CAF50),
+                        color: AppColor.primaryColor,
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),
@@ -74,7 +75,7 @@ CardRentLand({required this.data});
                   height: 40,
                   child: TextButton(
                               style: ButtonStyle(
-                                backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)
                                 ))

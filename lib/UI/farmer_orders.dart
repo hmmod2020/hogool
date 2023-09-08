@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
 import '../widgets/card_farmer_request.dart';
 import '../widgets/card_farmer_request2.dart';
 import '../widgets/card_farmer_request3.dart';
@@ -35,7 +36,7 @@ class _FarmerOrdersState extends State<FarmerOrders> {
                 height: 35,
                 margin: EdgeInsets.only(right: 20),
                 decoration:BoxDecoration(
-                  color: Color(0xffF0F9F1),
+                  color: AppColor.fillInputColor,
                   borderRadius: BorderRadius.all(Radius.circular(100))
                 ),
                 child: Center(
@@ -50,7 +51,7 @@ class _FarmerOrdersState extends State<FarmerOrders> {
             Text("طلبات العمل",
             style: TextStyle(
               fontSize: 30,
-              color: Color(0xff4CAF50),
+              color: AppColor.primaryColor,
               fontWeight: FontWeight.bold
             ),
             )

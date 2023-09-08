@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
+
 class CardFarmerHome extends StatelessWidget {
  int? id;
  String? image;
@@ -20,7 +22,7 @@ Widget screenRoute;
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20))),
-        color:Color(0xffF0F9F1),
+        color:AppColor.fillInputColor,
         child: Row(
           children: [
             Expanded(
@@ -50,7 +52,7 @@ Widget screenRoute;
                         children: [
                            Text(farmerName!,
                            style: TextStyle(
-                            color: Color(0xff4CAF50),
+                            color: AppColor.primaryColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
 
@@ -99,7 +101,7 @@ Widget screenRoute;
                           height: 35,
                            child: TextButton(
                             style: ButtonStyle(
-                              backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                              backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                               shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)
                               ))

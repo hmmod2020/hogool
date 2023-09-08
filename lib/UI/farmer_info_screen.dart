@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
+
 class FarmerInfoScreen extends StatelessWidget {
   const FarmerInfoScreen({super.key});
 //farmerInfoModle dataModel ;
@@ -32,7 +34,7 @@ class FarmerInfoScreen extends StatelessWidget {
                               child: Text("تفاصيل عن المزارع",
                                 style: TextStyle(
                                   fontSize: 32,
-                                  color: Color(0xff4CAF50),
+                                  color: AppColor.primaryColor,
                                   fontWeight: FontWeight.bold
                                 ),
                                 ),
@@ -51,7 +53,7 @@ class FarmerInfoScreen extends StatelessWidget {
                     child: Card(
                       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20))),
-        color:Color(0xffF0F9F1),
+        color:AppColor.fillInputColor,
         child: Column(
           children: [
             Expanded(
@@ -158,7 +160,7 @@ class FarmerInfoScreen extends StatelessWidget {
                     Text("محمد البدري محمد"
                     ,style: TextStyle(
                       fontSize: 17,
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontWeight: FontWeight.bold
                     ),
                     )
@@ -216,7 +218,7 @@ class FarmerInfoScreen extends StatelessWidget {
                       height: 45,
                       child: TextButton(
                                   style: ButtonStyle(
-                                    backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                    backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15)
                                     ))

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
+
 class CardNotificationsFramer extends StatelessWidget {
  
  late String nameInvestor;
@@ -12,7 +14,7 @@ class CardNotificationsFramer extends StatelessWidget {
       height: 150,
       decoration: BoxDecoration(
           borderRadius:BorderRadius.all(Radius.circular(20)),
-          color:Color(0xffF0F9F1),
+          color:AppColor.fillInputColor,
 
           ),
           child: Column(
@@ -37,7 +39,7 @@ class CardNotificationsFramer extends StatelessWidget {
                         width: 80,
                         child: TextButton(
                                   style: ButtonStyle(
-                                    backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                    backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(9)
                                     ))

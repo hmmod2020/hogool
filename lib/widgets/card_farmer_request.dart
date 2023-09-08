@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
+
 class CardFarmerRequest1 extends StatelessWidget {
   
 
@@ -11,7 +13,7 @@ class CardFarmerRequest1 extends StatelessWidget {
          height: 290, 
          decoration: BoxDecoration(
           borderRadius:BorderRadius.all(Radius.circular(20)),
-          color:Color(0xffF0F9F1)
+          color:AppColor.fillInputColor
           ),
           child: Padding(
             padding: const EdgeInsets.only(right: 20,top: 10,left: 20),
@@ -24,7 +26,7 @@ class CardFarmerRequest1 extends StatelessWidget {
                     child: 
                     Text("مشروع سوبا الزراعي",
                     style: TextStyle(
-                      color: Color(0xff4CAF50),
+                      color: AppColor.primaryColor,
                       fontSize: 22,
                       fontWeight: FontWeight.bold           
                             ),
@@ -108,7 +110,7 @@ class CardFarmerRequest1 extends StatelessWidget {
                         width: 120,
                         child: TextButton(
                                   style: ButtonStyle(
-                                    backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                    backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15)
                                     ))

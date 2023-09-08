@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/themes/app_color.dart';
 
 import '../widgets/card_farmer_request.dart';
 import '../widgets/card_farmer_request2.dart';
@@ -37,7 +38,7 @@ class _MyOffersScreenState extends State<MyOffersScreen> {
                 height: 35,
                 margin: EdgeInsets.only(right: 20),
                 decoration:BoxDecoration(
-                  color: Color(0xffF0F9F1),
+                  color: AppColor.fillInputColor,
                   borderRadius: BorderRadius.all(Radius.circular(100))
                 ),
                 child: Center(
@@ -52,7 +53,7 @@ class _MyOffersScreenState extends State<MyOffersScreen> {
             Text("عروضي",
             style: TextStyle(
               fontSize: 30,
-              color: Color(0xff4CAF50),
+              color: AppColor.primaryColor,
               fontWeight: FontWeight.bold
             ),
             )

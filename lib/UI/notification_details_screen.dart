@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
+
+import '../core/themes/app_color.dart';
 
 class NotificationsDetailsScreen extends StatelessWidget {
  
@@ -13,10 +16,10 @@ class NotificationsDetailsScreen extends StatelessWidget {
             children: [
                Row(
                   children: [
-                    Text("تفاصيل عرض العمل ",
+                    Text(AppString.offerDetails,
                           style: TextStyle(
                             fontSize: 35,
-                            color: Color(0xff4CAF50),
+                            color: AppColor.primaryColor,
                             fontWeight: FontWeight.bold
                           ),
                           ),
@@ -29,13 +32,13 @@ class NotificationsDetailsScreen extends StatelessWidget {
                   height: 400,
     decoration: BoxDecoration(
           borderRadius:BorderRadius.all(Radius.circular(20)),
-          color:Color(0xffF0F9F1),
+          color:AppColor.fillInputColor,
           ),
           child: Column(
             children: [
               Row(
                 children: [
-                  Text("اسم المستثمر : " ,
+              Text(AppString.investorName,
                   style:TextStyle(
                     color: Colors.black,
                     fontSize: 18
@@ -54,7 +57,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
               SizedBox(height: 20,),
                Row(
                 children: [
-                    Text("المحصول : " ,
+                    Text( AppString.corn,
                   style:TextStyle(
                     color: Colors.black,
                     fontSize: 18
@@ -71,7 +74,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
                SizedBox(height: 20,),
                Row(
                 children: [
-                     Text("مدة الاستمثار  : " ,
+                     Text(AppString.durationInvesmnet,
                   style:TextStyle(
                     color: Colors.black,
                     fontSize: 18
@@ -83,7 +86,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
                     fontSize: 18
                   ),
                   ),
-                  Text("أشهر " ,
+                  Text(AppString.months,
                   style:TextStyle(
                     color: Colors.black,
                     fontSize: 18
@@ -94,7 +97,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
                SizedBox(height: 20,),
                Row(
                 children: [
-                   Text("نبذةعن الارض الزراعية : " ,
+                   Text(AppString.desLand,
                   style:TextStyle(
                     color: Colors.black,
                     fontSize: 18
@@ -121,7 +124,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
                         width: 100,
                         child: TextButton(
                                   style: ButtonStyle(
-                                    backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                    backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(9)
                                     ))
@@ -132,7 +135,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
                                    
                                   },
                                    child: Center(
-                                     child: Text("قبول",
+                                     child: Text(AppString.accept,
                                      style: TextStyle(
                                       color: Colors.white,
                                       fontSize:13,
@@ -160,9 +163,9 @@ class NotificationsDetailsScreen extends StatelessWidget {
                                    
                                   },
                                    child: Center(
-                                     child: Text("رفض",
+                                     child: Text(AppString.reject,
                                      style: TextStyle(
-                                      color: Color(0xff4CAF50),
+                                      color: AppColor.primaryColor,
                                       fontSize:13,
                                       fontWeight: FontWeight.bold
                                      ),

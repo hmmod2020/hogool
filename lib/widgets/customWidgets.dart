@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../core/themes/app_color.dart';
 class CustomWidget{
 
   
@@ -20,17 +22,17 @@ Function validateor,bool isPassword,TextInputType inputType){
                             hintText: hintText,
                             hintTextDirection: TextDirection.rtl,
                             filled: true,
-                            fillColor: Color(0xffF0F9F1),
+                            fillColor: AppColor.fillInputColor,
                             enabledBorder:  OutlineInputBorder( 
                               borderSide: BorderSide(
-                                color: Color(0xffF0F9F1),
+                                color: AppColor.fillInputColor,
                               ), 
                               borderRadius: BorderRadius.all(Radius.circular(15)),
                             ),
                             focusedBorder: OutlineInputBorder(  
                               borderRadius: BorderRadius.all(Radius.circular(15),),
                               borderSide: BorderSide(
-                                color: Color(0xffF0F9F1)
+                                color: AppColor.fillInputColor
                               )
                             ),
                             errorBorder: OutlineInputBorder(  

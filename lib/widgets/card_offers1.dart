@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/themes/app_color.dart';
+
 class CardMyOffers extends StatelessWidget {
 
 
@@ -12,7 +14,7 @@ class CardMyOffers extends StatelessWidget {
          height: 340, 
          decoration: BoxDecoration(
           borderRadius:BorderRadius.all(Radius.circular(20)),
-          color:Color(0xffF0F9F1)
+          color:AppColor.fillInputColor
           ),
           child:Container(
              margin: EdgeInsets.only(right: 25,top: 25,left: 25),
@@ -28,7 +30,7 @@ class CardMyOffers extends StatelessWidget {
                       SizedBox(width: 10,),
                       Text("مقبول",
                       style:TextStyle(
-                        color: Color(0xff4CAF50),
+                        color: AppColor.primaryColor,
                         fontSize: 20
                       ),
                       ),
@@ -41,7 +43,7 @@ class CardMyOffers extends StatelessWidget {
                       flex: 1,
                       child: Text("وصف العرض",
                       style:TextStyle(
-                        color: Color(0xff4CAF50),
+                        color: AppColor.primaryColor,
                         fontSize: 22
                       ),
                       ),),
@@ -79,7 +81,7 @@ class CardMyOffers extends StatelessWidget {
                             children: [
                               Text("نوع الري : " ,
                       style:TextStyle(
-                        color: Color(0xff4CAF50),
+                        color: AppColor.primaryColor,
                         fontSize: 22
                       ),
                       ),
@@ -96,7 +98,7 @@ class CardMyOffers extends StatelessWidget {
                             children: [
                               Text("مالك الارض :" ,
                       style:TextStyle(
-                        color: Color(0xff4CAF50),
+                        color: AppColor.primaryColor,
                         fontSize: 22
                       ),
                       ),
@@ -113,7 +115,7 @@ class CardMyOffers extends StatelessWidget {
                             children: [
                                        Text("اسم المزارع :" ,
                       style:TextStyle(
-                        color: Color(0xff4CAF50),
+                        color: AppColor.primaryColor,
                         fontSize: 22
                       ),
                       ),

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
+import '../core/themes/app_color.dart';
 import 'farmer_orders.dart';
 
 class ProjectsScreen extends StatelessWidget {
@@ -15,20 +17,20 @@ class ProjectsScreen extends StatelessWidget {
           children: [
             Container(
                   margin: EdgeInsets.only(top: 30,right: 20,bottom: 10),
-                  child: Text("معرض الأعمال",
+                  child: Text(AppString.myWork,
                   style: TextStyle(
                     fontSize: 40,
-                    color: Color(0xff4CAF50),
+                    color: AppColor.primaryColor,
                     fontWeight: FontWeight.bold
                   ),
                   )),
-      buttonProject("عروضي",Container(),context),
+      buttonProject(AppString.myOffer,Container(),context),
       SizedBox(height: 20,),
-      buttonProject("الأراضي",Container(),context),
+      buttonProject(AppString.lands,Container(),context),
       SizedBox(height: 20,),
-      buttonProject("طلبات العمل",Container(),context),
+      buttonProject(AppString.jobRequests,Container(),context),
       SizedBox(height: 20,),
-      buttonProject("المشاريع",Container(),context),
+      buttonProject(AppString.projects,Container(),context),
       SizedBox(height: 40,),
 
             Center(
@@ -37,7 +39,7 @@ class ProjectsScreen extends StatelessWidget {
                 height: 70,
                 child: TextButton(
                               style: ButtonStyle(
-                                backgroundColor:MaterialStateProperty.all( Color(0xff4CAF50)),
+                                backgroundColor:MaterialStateProperty.all( AppColor.primaryColor),
                                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)
                                 ))
@@ -45,7 +47,7 @@ class ProjectsScreen extends StatelessWidget {
                               onPressed: (){
                                
                               },
-                               child: Text("إنشاء عرض استثماري",
+                               child: Text(AppString.createInvesmentOffer,
                                style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 25,
@@ -68,7 +70,7 @@ Widget buttonProject(String titel,Widget screenRoute,BuildContext context){
     child: Container(
       margin: EdgeInsets.only(right: 20,left: 20,),
       height: 90,
-      color:Color(0xffF0F9F1) ,
+      color:AppColor.fillInputColor ,
       child: Row(
         children: [
           Container(
