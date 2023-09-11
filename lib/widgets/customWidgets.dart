@@ -33,18 +33,20 @@ Function validateor,bool isPassword,TextInputType inputType){
                               borderRadius: BorderRadius.all(Radius.circular(15),),
                               borderSide: BorderSide(
                                 color: AppColor.fillInputColor
+                                
                               )
                             ),
                             errorBorder: OutlineInputBorder(  
                               borderRadius: BorderRadius.all(Radius.circular(15),),
                               borderSide: BorderSide(
-                                color: Colors.red,
+                                color: AppColor.hentError
+                                //          ,
                               ),
                             ),
                             focusedErrorBorder:  OutlineInputBorder(  
                               borderRadius: BorderRadius.all(Radius.circular(15),),
                               borderSide: BorderSide(
-                                color: Colors.red,
+                                color: AppColor.hentError,
                               ),
                             ) 
                           ),

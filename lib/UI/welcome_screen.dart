@@ -80,12 +80,12 @@ static String welcomePage="/welcomePage";
               Container(
                 margin: EdgeInsets.only(right: 7),
                 child: Icon(Icons.arrow_back,
-                color: Colors.white,
+                color: AppColor.backgroundColor,
                 ),
               ),
               Text(AppString.start,
               style: TextStyle(
-                color: Colors.white,
+                color: AppColor.backgroundColor,
                 fontSize: 22,
               ),
               ),

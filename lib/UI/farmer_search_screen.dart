@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/farmer_info_Screen.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:hogool/model/farmer_model.dart';
 import 'package:hogool/modelView/farmers_screen_modelView.dart';
 import 'package:hogool/widgets/card_farmer_home.dart';
@@ -92,7 +93,7 @@ static String farmerScreen="/farmerScreen";
               child: Text("تصفح المزارعين ",
               style: TextStyle(
                 fontSize: 30,
-                color: Colors.black
+                color: AppColor.titleColor
               ),
               ),
             ),
@@ -145,7 +146,7 @@ static String farmerScreen="/farmerScreen";
                 prefixIcon: Icon(Icons.search,
                 color: AppColor.primaryColor,
                 ),
-                            hintText: "قم بالبحث عن مزارع",
+                            hintText:AppString.searchFarmer ,
                             hintTextDirection: TextDirection.rtl,
                             filled: true,
                             fillColor: AppColor.fillInputColor,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:multi_dropdown/enum/app_enums.dart';
 import 'package:multi_dropdown/models/chip_config.dart';
 import 'package:multi_dropdown/models/network_config.dart';
@@ -11,7 +12,7 @@ import 'package:multi_dropdown/widgets/single_selected_item.dart';
 import '../core/themes/app_color.dart';
 
 class FillterFarmerSearchDilog extends StatelessWidget {
-   String _groupVal="الخرطوم";
+   String _groupVal=AppString.khartoum;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class FillterFarmerSearchDilog extends StatelessWidget {
               child: Stack(
                 children: [
                   Center(
-                    child: Text("فلترة البحث"
+                    child: Text(AppString.searchFilter
                     ,style: TextStyle(
                       fontSize: 25,
                       color:AppColor.primaryColor,
@@ -66,16 +67,16 @@ class FillterFarmerSearchDilog extends StatelessWidget {
             backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
-          optionsBackgroundColor:Colors.white,
+          optionsBackgroundColor:AppColor.backgroundColor,
           selectedOptionTextColor: AppColor.primaryColor,
           selectedOptionIcon: Icon(
             Icons.check,
             color: AppColor.primaryColor
             ,
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: AppColor.backgroundColor,
           dropdownHeight: 180.0,
-          hint: "اختر المحاصيل",
+          hint: AppString.selectCrops,
           onOptionSelected: ((selectedOptions) {
             print(selectedOptions);
           }),
@@ -89,7 +90,7 @@ class FillterFarmerSearchDilog extends StatelessWidget {
 
         ]),
         SizedBox(height: 55,),
-        Text("الموقع : ",
+        Text(AppString.location,
         style: TextStyle(
           fontSize: 25,
           color: AppColor.primaryColor,
@@ -108,12 +109,12 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                         children: [
                           Radio(
                             focusColor: AppColor.primaryColor,
-                            value:"الخرطوم" , groupValue: _groupVal, onChanged:((value) {
+                            value:AppString.khartoum , groupValue: _groupVal, onChanged:((value) {
                               setState((){
                               _groupVal=value.toString();
                               });
                           })),
-                          Text("الخرطوم",
+                          Text(AppString.khartoum,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             
@@ -125,12 +126,12 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                         children: [
                           Radio(
                             
-                            value:"بحري" , groupValue: _groupVal, onChanged:((value) {
+                            value:AppString.bahry , groupValue: _groupVal, onChanged:((value) {
                               setState((){
                               _groupVal=value.toString();
                               });
                           })),
-                          Text("بحري",
+                          Text(AppString.bahry,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             
@@ -141,12 +142,12 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                       Row(
                         children: [
                           Radio(
-                            value:"امدرمان" , groupValue: _groupVal, onChanged:((value) {
+                            value:AppString.omdorman , groupValue: _groupVal, onChanged:((value) {
                               setState((){
                               _groupVal=value.toString();
                               });
                           })),
-                          Text("امدرمان",
+                          Text(AppString.omdorman,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             
@@ -177,9 +178,9 @@ class FillterFarmerSearchDilog extends StatelessWidget {
                                //////////////
                                ///fillter
                               },
-                               child: Text("حفظ",
+                               child: Text(AppString.save,
                                style: TextStyle(
-                                color: Colors.white,
+                                color: AppColor.backgroundColor,
                                 fontSize:17,
                                 fontWeight: FontWeight.bold
                                ),

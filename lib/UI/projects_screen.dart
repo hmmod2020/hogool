@@ -49,7 +49,7 @@ class ProjectsScreen extends StatelessWidget {
                               },
                                child: Text(AppString.createInvesmentOffer,
                                style: TextStyle(
-                                color: Colors.white,
+                                color: AppColor.backgroundColor,
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold
                                ),
@@ -81,7 +81,7 @@ Widget buttonProject(String titel,Widget screenRoute,BuildContext context){
           ),
           Text(titel,
           style:TextStyle(
-            color: Colors.black,
+            color: AppColor.titleColor,
             fontSize: 30,
           ),
           )

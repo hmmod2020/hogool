@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 
@@ -17,13 +18,13 @@ class NewScreen extends StatelessWidget {
         Expanded(
           flex: 4,
           child: Container(
-            color: Colors.white,
+            color: AppColor.backgroundColor,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Container(
                   margin: EdgeInsets.only(top: 20,right: 20,),
-                  child: Text("أحدث الأخبار",
+                  child: Text(AppString.news,
                   style: TextStyle(
                     fontSize: 30,
                     color: AppColor.primaryColor,
@@ -58,7 +59,7 @@ class NewScreen extends StatelessWidget {
                   child: Text("عنوان الخبر مفروض يكون هنا ",
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontWeight: FontWeight.bold
                   ),
                   )),
@@ -69,7 +70,7 @@ class NewScreen extends StatelessWidget {
                       child:Text("معلومات هنا بتتكلم عن الحاصل معلومات هنا تتكلم عن الحاصل. علومات هنا بتتكلم عن الحاصل معلومات هنا تتكلم عن الحاصلمعلومات ها بتتكلم عن الحاصل معلومات هنا تتكلم عن الحاصل. معلومات هنا بتتكلم ع الحاصل معلومات هنا تتكلم عن الحاصل.معلومات هنا بتتكلم عن الحاصل معلومات هنا تتكلم عن الحاصل. معلومات هنا بتتكلم عن الحاصل علومات هنا تتكلم عن الحاصل.معلومات هنا بتتكلم عن الحاصل معلومات ها تتكلم عن الحاصل. معلومات هنا بتتكلم عن الحاصل معلومات هنا تتكلم عن الحاصل.",
                       style: TextStyle(
                         fontSize: 19,
-                        color: Color(0xFF51545B)
+                        color: AppColor.textLightColor
                       ),
                       ) 
                     ),

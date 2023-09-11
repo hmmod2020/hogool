@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 
@@ -39,7 +40,7 @@ class LandScreen extends StatelessWidget {
                   flex: 63,
                   child:Container(
                     decoration:BoxDecoration(
-                      color: Colors.white,
+                      color: AppColor.backgroundColor,
                       borderRadius:BorderRadius.only(topLeft: Radius.circular(25),topRight:Radius.circular(25),
                       
                       )
@@ -62,7 +63,7 @@ class LandScreen extends StatelessWidget {
               height: 25,
               margin: EdgeInsets.only(top: 20,right: 20),
               decoration:BoxDecoration(
-                color: Colors.white,
+                color: AppColor.backgroundColor,
                 borderRadius: BorderRadius.all(Radius.circular(100))
               ),
               child: Center(
@@ -73,9 +74,9 @@ SizedBox(width: 10,),
            Container(
             margin: EdgeInsets.only(top: 20),
             child: Text(
-              "اسم المزارع",
+              AppString.farmerName,
               style:TextStyle(
-                color: Colors.black,
+                color: AppColor.titleColor,
                 fontSize: 18
               ),
               )),
@@ -98,7 +99,7 @@ SizedBox(width: 10,),
               height: 25,
               margin: EdgeInsets.only(top: 20,right: 20),
               decoration:BoxDecoration(
-                color: Colors.white,
+                color: AppColor.backgroundColor,
                 borderRadius: BorderRadius.all(Radius.circular(100))
               ),
               child: Center(
@@ -111,7 +112,7 @@ SizedBox(width: 10,),
             child: Text(
               "الخرطوم",
               style:TextStyle(
-                color: Colors.black,
+                color: AppColor.titleColor,
                 fontSize: 18
               ),
               )),
@@ -133,7 +134,7 @@ SizedBox(width: 10,),
                                 SizedBox(height: 5,),
                                 Row(
                                   children: [
-                                    Text("مدة الايجار:",
+                                    Text(AppString.durationRent,
                                     style: TextStyle(
                                       color: AppColor.primaryColor,
                                       fontSize: 15
@@ -141,13 +142,13 @@ SizedBox(width: 10,),
                                     ),
                                     Text(" 6",
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: AppColor.titleColor,
                                       fontSize: 15
                                     ),
                                     ),
-                                    Text(" أشهر",
+                                    Text(AppString.months,
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: AppColor.titleColor,
                                       fontSize: 15
                                     ),
                                     ),
@@ -156,7 +157,7 @@ SizedBox(width: 10,),
                                 SizedBox(height: 5,),
                                  Row(
                                   children: [
-                                      Text("طريقة الري :",
+                                      Text(AppString.irrigation_typemodels,
                                     style: TextStyle(
                                       color: AppColor.primaryColor,
                                       fontSize: 15
@@ -164,7 +165,7 @@ SizedBox(width: 10,),
                                     ),
                                     Text("محوري",
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: AppColor.titleColor,
                                       fontSize: 15
                                     ),
                                     ),
@@ -180,13 +181,13 @@ SizedBox(width: 10,),
                                     ),
                                       Text("70000",
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: AppColor.titleColor,
                                       fontSize: 15
                                     ),
                                     ),
-                                     Text(" للشهر",
+                                     Text(AppString.forMonth,
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: AppColor.titleColor,
                                       fontSize: 15
                                     ),
                                     ),
@@ -195,9 +196,9 @@ SizedBox(width: 10,),
                                 SizedBox(height: 10,),
                                 Row(
                                   children: [
-                                    Text("وصف الأرض :",
+                                    Text(AppString.landDescription,
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: AppColor.titleColor,
                                       fontSize: 15
                                     ),
                                     ),
@@ -230,9 +231,9 @@ SizedBox(width: 10,),
                               onPressed: (){
                                
                               },
-                               child: Text("طلب ايجار ",
+                               child: Text(AppString.rentRequest,
                                style: TextStyle(
-                                color: Colors.white,
+                                color: AppColor.backgroundColor,
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold
                                ),
@@ -255,7 +256,7 @@ SizedBox(width: 10,),
                 height: 35,
                 margin: EdgeInsets.only(top: 20,right: 20),
                 decoration:BoxDecoration(
-                  color: Colors.white,
+                  color: AppColor.backgroundColor,
                   borderRadius: BorderRadius.all(Radius.circular(100))
                 ),
                 child: Center(

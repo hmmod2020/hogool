@@ -6,11 +6,13 @@ import 'package:hogool/UI/homeNav.dart';
 import 'package:hogool/UI/land_search.dart';
 import 'package:hogool/UI/welcome_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:hogool/model/land_model.dart';
 import 'package:hogool/modelView/home_screen_viewModel.dart';
 import 'package:hogool/widgets/card_rent_land.dart';
 import 'package:hogool/widgets/show_home_widget.dart';
 import 'package:lottie/lottie.dart';
+import '../core/themes/app_color.dart';
 import '../model/card_land_model.dart';
 import '../widgets/card_farmer_home.dart';
 import '../widgets/card_investment_offer.dart';
@@ -26,10 +28,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColor.backgroundColor,
      appBar: AppBar(
       elevation: 0.0,
-      backgroundColor: Colors.white,
+      backgroundColor: AppColor.backgroundColor,
       leading: Container(
         margin: EdgeInsets.only(right: 5),
         child: ClipRRect(
@@ -39,10 +41,10 @@ class HomeScreen extends StatelessWidget {
                           ),
                       ),
       ),
-      title:   Text("مرحبا بك : "+"محمد البدري",
+      title:   Text(AppString.welcome+"محمد البدري",
                       style: TextStyle(
                         fontSize: 20,
-                        color:Colors.black
+                        color:AppColor.titleColor
                       ),),
      ),
 
@@ -59,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                    SizedBox(height: 20,),   
               SliderWidgetControl() , 
               SizedBox(height: 20,),
-              ShowHomeWidget(titel: "تصفح المزارعين ",screenRoute:FarmerSearchScreen(),),
+              ShowHomeWidget(titel: AppString.browseFarmer,screenRoute:FarmerSearchScreen(),),
               CardFarmerHome(
                 id: 0,
           farmerName:snapshot.data?.farmerData?.full_name.toString(),
@@ -72,12 +74,12 @@ class HomeScreen extends StatelessWidget {
           screenRoute: FarmerInfoScreen() ,
         ),
         SizedBox(height: 10,),
-         ShowHomeWidget(titel: "أحدث الأخبار ",screenRoute:FarmerSearchScreen(),),
+         ShowHomeWidget(titel: AppString.lastNew,screenRoute:FarmerSearchScreen(),),
          
          CardNewHome(id: 0, titleNew:snapshot.data!.newData?.title, description: snapshot.data?.newData?.contnet),
 
          SizedBox(height: 10,),
-         ShowHomeWidget(titel: "إكتشف فرص العمل ",screenRoute:FarmerSearchScreen(),),
+         ShowHomeWidget(titel: AppString.descoverJob,screenRoute:FarmerSearchScreen(),),
          CardInvestmentOffer(
           id: 0,
           duration: snapshot.data!.offerData!.duration,
@@ -87,7 +89,7 @@ class HomeScreen extends StatelessWidget {
           
         ),
         SizedBox(height: 10,),
-         ShowHomeWidget(titel: "افضل الاراضي للاستثمار",screenRoute: LandsScreen(),),
+         ShowHomeWidget(titel: AppString.landForRent,screenRoute: LandsScreen(),),
           CardRentLand(data: LandData(title:snapshot.data!.landData?.title,duration:snapshot.data!.landData!.duration,description: snapshot.data!.landData!.description))
                 ],
               ),

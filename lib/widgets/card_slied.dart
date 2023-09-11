@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
+import '../core/themes/app_color.dart';
+
 
 class SlideHogool extends StatelessWidget {
 
@@ -37,7 +39,7 @@ SlideHogool({required this.image,required this.text});
             height: 200,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
-             color:Colors.black.withOpacity(0.25)
+             color:AppColor.titleColor.withOpacity(0.25)
             ), 
           ),
            Center(
@@ -49,7 +51,7 @@ SlideHogool({required this.image,required this.text});
                  animatedTexts: [
                 TypewriterAnimatedText(text,
                 textStyle: TextStyle(
-                color: Colors.white,
+                color: AppColor.backgroundColor,
                 fontSize: 15,
                 fontWeight: FontWeight.bold
               ),

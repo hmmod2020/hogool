@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hogool/core/themes/app_color.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../widgets/card_farmer_request.dart';
 import '../widgets/card_farmer_request2.dart';
@@ -50,7 +51,7 @@ class _MyOffersScreenState extends State<MyOffersScreen> {
               },
             ),
             SizedBox(width: 10,),
-            Text("عروضي",
+            Text(AppString.myOffer,
             style: TextStyle(
               fontSize: 30,
               color: AppColor.primaryColor,
@@ -106,7 +107,7 @@ class _MyOffersScreenState extends State<MyOffersScreen> {
                                  _selectedItem=itemIndex;
                                });
                               },
-                               child: Text("مقبولة",
+                               child: Text(AppString.itsAccept,
                                style: TextStyle(
                                 color: Color(textColor),
                                 fontSize: 15,
@@ -143,7 +144,7 @@ class _MyOffersScreenState extends State<MyOffersScreen> {
                                  _selectedItem=itemIndex;
                                });
                               },
-                               child: Text("مرفوضة",
+                               child: Text(AppString.itsRejected,
                                style: TextStyle(
                                 color: Color(textColor),
                                 fontSize: 15,
@@ -180,7 +181,7 @@ class _MyOffersScreenState extends State<MyOffersScreen> {
                                  _selectedItem=itemIndex;
                                });
                               },
-                               child: Text("معقلة",
+                           child: Text(AppString.waitting,
                                style: TextStyle(
                                 color: Color(textColor),
                                 fontSize: 15,

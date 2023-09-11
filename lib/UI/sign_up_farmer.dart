@@ -22,7 +22,7 @@ static String singUpFarmer ="/singUpFarmer";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColor.backgroundColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -76,7 +76,7 @@ static String singUpFarmer ="/singUpFarmer";
                             },
                              child: Text(AppString.signUp,
                              style: TextStyle(
-                              color: Colors.white,
+                              color: AppColor.backgroundColor,
                               fontSize: 22,
                               fontWeight: FontWeight.bold
                              ),
@@ -102,7 +102,7 @@ static String singUpFarmer ="/singUpFarmer";
                               Text(
                               AppString.doYouHaveAccount,
                               style: TextStyle(
-                                color: Colors.black,
+                                color: AppColor.titleColor,
                                 fontSize: 20,
                               ),
                               ),

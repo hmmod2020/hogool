@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 
@@ -24,7 +25,7 @@ class CardNotificationsFramer extends StatelessWidget {
               Expanded(child:
               Text("ارسل اليك المستثمر ${nameInvestor} طلب عمل ",
               style: TextStyle(
-                color: Colors.black,
+                color: AppColor.titleColor,
                 fontSize: 20,
               ),
               
@@ -50,9 +51,9 @@ class CardNotificationsFramer extends StatelessWidget {
                                    
                                   },
                                    child: Center(
-                                     child: Text("التفاصيل",
+                                     child: Text(AppString.moreDetails,
                                      style: TextStyle(
-                                      color: Colors.white,
+                                      color: AppColor.backgroundColor,
                                       fontSize:13,
                                       fontWeight: FontWeight.bold
                                      ),

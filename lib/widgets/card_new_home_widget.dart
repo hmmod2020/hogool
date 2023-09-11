@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../UI/new_screen.dart';
 import '../core/themes/app_color.dart';
@@ -40,7 +41,7 @@ class CardNewHome extends StatelessWidget {
                   Text(titleNew! ,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 20,
                     
                   ),
@@ -73,9 +74,9 @@ class CardNewHome extends StatelessWidget {
                                 Navigator.push(context, CupertinoPageRoute(builder: (context)=>NewScreen()));
                                ///for show all news
                               },
-                               child: Text("اقرأ المزيد",
+                               child: Text(AppString.readMore,
                                style: TextStyle(
-                                color: Colors.white,
+                                color: AppColor.backgroundColor,
                                 fontSize:13,
                                 fontWeight: FontWeight.bold
                                ),

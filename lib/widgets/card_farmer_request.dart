@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 
@@ -43,7 +44,7 @@ class CardFarmerRequest1 extends StatelessWidget {
                 SizedBox(height: 10,),
                  Row(
                   children: [
-                    Text("إسم المزارع :",
+                    Text(AppString.farmerNameC,
                     style: TextStyle(
                       
                     ),
@@ -58,7 +59,7 @@ class CardFarmerRequest1 extends StatelessWidget {
                   SizedBox(height: 10,),
                  Row(
                   children: [
-                    Text("إسم المستثمر :",
+                    Text(AppString.investorName,
                     style: TextStyle(
                       
                     ),
@@ -73,7 +74,7 @@ class CardFarmerRequest1 extends StatelessWidget {
                  SizedBox(height: 10,),
                  Row(
                   children: [
-                    Text("موقع العمل",
+                    Text(AppString.locationWork,
                     style: TextStyle(
                       
                     ),
@@ -88,7 +89,7 @@ class CardFarmerRequest1 extends StatelessWidget {
                  SizedBox(height: 10,),
                  Row(
                   children: [
-                    Text("وصف المشورع :",
+                    Text(AppString.workDescription,
                     style: TextStyle(
                       
                     ),
@@ -121,9 +122,9 @@ class CardFarmerRequest1 extends StatelessWidget {
                                    ///show faremer by id
                                   },
                                    child: Center(
-                                     child: Text("مزيد من التفاصيل",
+                                     child: Text(AppString.moreInfo,
                                      style: TextStyle(
-                                      color: Colors.white,
+                                      color: AppColor.backgroundColor,
                                       fontSize:12,
                                       fontWeight: FontWeight.bold
                                      ),

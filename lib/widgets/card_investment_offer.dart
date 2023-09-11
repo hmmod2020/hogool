@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/new_screen.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../UI/land_screen.dart';
 import '../core/themes/app_color.dart';
@@ -67,7 +68,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                           flex:1,
                           child:Row(
                             children: [
-                              Text("العائد : ",
+                              Text(AppString.income,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize:13
@@ -85,7 +86,7 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                           flex:1,
                           child:Row(
                             children: [
-                              Text("المدة : ",
+                              Text(AppString.durationInvesmnet,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize:13
@@ -129,9 +130,9 @@ CardInvestmentOffer({ required this.titel,required this.yield,required this.dura
                              ///show faremer by id
                              
                             },
-                             child: Text("مزيد من التفاصيل",
+                             child: Text(AppString.moreInfo,
                              style: TextStyle(
-                              color: Colors.white,
+                              color: AppColor.backgroundColor,
                               fontSize:10,
                               fontWeight: FontWeight.bold
                              ),

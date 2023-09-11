@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 
@@ -28,7 +29,7 @@ class CardMyOffers extends StatelessWidget {
                         child: Image.asset("assets/green.png"),
                       ),
                       SizedBox(width: 10,),
-                      Text("مقبول",
+                      Text(AppString.accepted,
                       style:TextStyle(
                         color: AppColor.primaryColor,
                         fontSize: 20
@@ -41,7 +42,7 @@ class CardMyOffers extends StatelessWidget {
                   children: [
                     Expanded(
                       flex: 1,
-                      child: Text("وصف العرض",
+                      child: Text(AppString.offerDescriptionC,
                       style:TextStyle(
                         color: AppColor.primaryColor,
                         fontSize: 22
@@ -55,13 +56,13 @@ class CardMyOffers extends StatelessWidget {
                           Text("300000 -",
                           style: TextStyle(
                             fontSize: 22,
-                            color: Colors.amber
+                            color:AppColor.priceColor
                           ),
                           ),
-                          Text("شهريا",
+                          Text(AppString.monthly,
                           style: TextStyle(
                             fontSize: 22,
-                            color: Colors.amber
+                            color: AppColor.priceColor
                           ),
                           ),
                         ],
@@ -73,13 +74,13 @@ class CardMyOffers extends StatelessWidget {
                   child:Text("معلومات هنا بتتكلم عن الحاصل معلوماتمعلومات هنا بتتكلم عن هنبتتكلم عن الحاصل معلومات ",
                           style: TextStyle(
                             fontSize: 16,
-                            color: Colors.black
+                            color: AppColor.titleColor
                           ),
                           ), ),
                           SizedBox(height: 10,),
                           Row(
                             children: [
-                              Text("نوع الري : " ,
+                              Text(AppString.irrigation_typemodels,
                       style:TextStyle(
                         color: AppColor.primaryColor,
                         fontSize: 22
@@ -87,7 +88,7 @@ class CardMyOffers extends StatelessWidget {
                       ),
                           Text("محوري",
                       style:TextStyle(
-                        color: Colors.black,
+                        color: AppColor.titleColor,
                         fontSize: 16
                       ),
                       ),
@@ -96,7 +97,7 @@ class CardMyOffers extends StatelessWidget {
                           SizedBox(height: 10,),
                           Row(
                             children: [
-                              Text("مالك الارض :" ,
+                              Text(AppString.theLandOner,
                       style:TextStyle(
                         color: AppColor.primaryColor,
                         fontSize: 22
@@ -104,7 +105,7 @@ class CardMyOffers extends StatelessWidget {
                       ),
                           Text("محمد البدري",
                       style:TextStyle(
-                        color: Colors.black,
+                        color: AppColor.titleColor,
                         fontSize: 16
                       ),
                       ),
@@ -113,7 +114,7 @@ class CardMyOffers extends StatelessWidget {
                           SizedBox(height: 10,),
                           Row(
                             children: [
-                                       Text("اسم المزارع :" ,
+                                       Text(AppString.farmerNameC ,
                       style:TextStyle(
                         color: AppColor.primaryColor,
                         fontSize: 22
@@ -121,7 +122,7 @@ class CardMyOffers extends StatelessWidget {
                       ),
                           Text("احمد دفع الله",
                       style:TextStyle(
-                        color: Colors.black,
+                        color: AppColor.titleColor,
                         fontSize: 16
                       ),
                       ),
@@ -143,7 +144,7 @@ class CardMyOffers extends StatelessWidget {
                           SizedBox(width: 5,),
                           Text("الخرطوم",
                       style:TextStyle(
-                        color: Colors.black,
+                        color: AppColor.titleColor,
                         fontSize: 16
                       ),
                       ),
@@ -162,7 +163,7 @@ class CardMyOffers extends StatelessWidget {
                           SizedBox(width: 5,),
                           Text("0117034643",
                       style:TextStyle(
-                        color: Colors.black,
+                        color: AppColor.titleColor,
                         fontSize: 16
                       ),
                       )

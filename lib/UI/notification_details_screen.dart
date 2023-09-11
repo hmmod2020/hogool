@@ -40,13 +40,13 @@ class NotificationsDetailsScreen extends StatelessWidget {
                 children: [
               Text(AppString.investorName,
                   style:TextStyle(
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 18
                   ),
                   ),
                   Text("احمد دفع الله" ,
                   style:TextStyle(
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 18
                   ),
                   ),
@@ -59,13 +59,13 @@ class NotificationsDetailsScreen extends StatelessWidget {
                 children: [
                     Text( AppString.corn,
                   style:TextStyle(
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 18
                   ),
                   ),
                   Text("القمح" ,
                   style:TextStyle(
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 18
                   ),
                   ),
@@ -76,19 +76,19 @@ class NotificationsDetailsScreen extends StatelessWidget {
                 children: [
                      Text(AppString.durationInvesmnet,
                   style:TextStyle(
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 18
                   ),
                   ),
                   Text("6 " ,
                   style:TextStyle(
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 18
                   ),
                   ),
                   Text(AppString.months,
                   style:TextStyle(
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 18
                   ),
                   ),
@@ -99,7 +99,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
                 children: [
                    Text(AppString.desLand,
                   style:TextStyle(
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 18
                   ),
                   ),
@@ -109,7 +109,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
                Expanded(
                 child: Text("نبذة طويلة فيها تفاصيل عن طبيعة الارض الحيتم الزراعة فيها ونظام الري وكل حاجة: " ,
                   style:TextStyle(
-                    color: Colors.black,
+                    color: AppColor.titleColor,
                     fontSize: 18
                   ),
                   ),
@@ -137,7 +137,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
                                    child: Center(
                                      child: Text(AppString.accept,
                                      style: TextStyle(
-                                      color: Colors.white,
+                                      color: AppColor.backgroundColor,
                                       fontSize:13,
                                       fontWeight: FontWeight.bold
                                      ),
@@ -152,7 +152,7 @@ class NotificationsDetailsScreen extends StatelessWidget {
                         width: 100,
                         child: TextButton(
                                   style: ButtonStyle(
-                                    backgroundColor:MaterialStateProperty.all( Colors.white),
+                                    backgroundColor:MaterialStateProperty.all( AppColor.backgroundColor),
                                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(9)
                                     ))

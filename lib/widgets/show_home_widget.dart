@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/farmer_search_screen.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 import 'card_farmer_home.dart';
@@ -25,7 +26,7 @@ class ShowHomeWidget extends StatelessWidget {
               margin: EdgeInsets.only(right: 15),
               child:Text(titel,
           style: TextStyle(
-              color: Colors.black,
+              color: AppColor.titleColor,
               fontSize: 25,
               fontWeight: FontWeight.bold
           ),
@@ -39,7 +40,7 @@ class ShowHomeWidget extends StatelessWidget {
                InkWell(
                  child: Container(
                   margin: EdgeInsets.only(left: 25),
-                    child:Text("عرض الكل",
+                    child:Text(AppString.showAll,
                          style: TextStyle(
                     color: AppColor.primaryColor,
                     fontSize: 17,

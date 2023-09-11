@@ -12,6 +12,4 @@ class AppColor{
   static const textLightColor=Color(0xFF51545B);
   static const priceColor=Colors.amber;
 
-
-
 }

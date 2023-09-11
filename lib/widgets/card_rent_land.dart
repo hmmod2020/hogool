@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/land_search.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:hogool/model/land_model.dart';
 
 import '../UI/land_screen.dart';
@@ -49,7 +50,7 @@ CardRentLand({required this.data});
                     flex: 1,
                     child: Container(
                         margin: EdgeInsets.only(top: 10),
-                      child: Text("المدة : "+" "+data.duration.toString()+" اشهر " ,
+                      child: Text(AppString.duration+" "+data.duration.toString()+AppString.months ,
                       style:TextStyle(
                         fontSize: 17,
                       ),
@@ -86,9 +87,9 @@ CardRentLand({required this.data});
                                ///show faremer by id
                               },
                                child: Center(
-                                 child: Text("مزيد من التفاصيل",
+                                 child: Text(AppString.moreInfo,
                                  style: TextStyle(
-                                  color: Colors.white,
+                                  color: AppColor.backgroundColor,
                                   fontSize:12,
                                   fontWeight: FontWeight.bold
                                  ),

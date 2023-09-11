@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:hogool/model/land_model.dart';
 import 'package:hogool/widgets/card_rent_land.dart';
 
@@ -30,10 +31,10 @@ LandData(title: "ارض زراعية للايجار السنوي", description: 
             SizedBox(height: 25,),
             Container(
               margin: EdgeInsets.only(right: 20),
-              child: Text("تصفح الأراضي",
+              child: Text(AppString.browseLand,
               style: TextStyle(
                 fontSize: 30,
-                color: Colors.black
+                color: AppColor.titleColor
               ),
               ),
             ),
@@ -71,7 +72,7 @@ LandData(title: "ارض زراعية للايجار السنوي", description: 
                 prefixIcon: Icon(Icons.search,
                 color: AppColor.primaryColor,
                 ),
-                            hintText: "قم بالبحث عن أرض ",
+                            hintText: AppString.searchLand,
                             hintTextDirection: TextDirection.rtl,
                             filled: true,
                             fillColor: AppColor.fillInputColor,

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 import 'account_farmer.dart';
@@ -33,34 +34,34 @@ var listOfKeys=[firstTabNavKey,secondTabNavKey,thirdTabNavKey,fourthTabNavKey];
         controller: tabController,
         tabBar:CupertinoTabBar(
           
-          backgroundColor: Colors.white,
+          backgroundColor: AppColor.backgroundColor,
           activeColor: AppColor.primaryColor,
-          inactiveColor: Colors.black,
+          inactiveColor: AppColor.inactiveColor,
           items:const<BottomNavigationBarItem> [
      BottomNavigationBarItem(
               icon:Icon(Icons.home_outlined,
               size: 27,
               ),
-              label: "الرئيسية"
+              label: AppString.hmoe
             ),
             BottomNavigationBarItem(
               
               icon:Icon(Icons.person_outline,
               size: 27,
               ),
-              label: "حسابي"
+              label: AppString.myAccount
             ),
              BottomNavigationBarItem(
               icon:Icon(Icons.notifications_outlined,
               size: 27,
               ),
-              label: "الإشعارات"
+              label: AppString.notification
             ),
              BottomNavigationBarItem(
               icon:Icon(Icons.save_outlined,
               size: 27,
               ),
-              label: "اعمالي"
+              label: AppString.myProtofilo
             ),
           ],
         ) ,

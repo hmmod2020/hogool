@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 
@@ -34,7 +35,7 @@ class CardInvesmentSelected extends StatelessWidget {
                 SizedBox(height: 20,),
                  Row(
                   children: [
-                     Text("اسم المشروع",
+                     Text(AppString.invesmentName,
                     style:TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 18,
@@ -52,7 +53,7 @@ class CardInvesmentSelected extends StatelessWidget {
                 SizedBox(height: 20,),
                  Row(
                   children: [
-                     Text("طريقة الري",
+                     Text(AppString.irrigation_typemodelsC,
                     style:TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 18,
@@ -85,9 +86,9 @@ class CardInvesmentSelected extends StatelessWidget {
                                    ///show faremer by id
                                   },
                                    child: Center(
-                                     child: Text("ارسال طلب عمل",
+                                     child: Text(AppString.sendJobRequests,
                                      style: TextStyle(
-                                      color: Colors.white,
+                                      color: AppColor.backgroundColor,
                                       fontSize:12,
                                       fontWeight: FontWeight.bold
                                      ),

@@ -57,7 +57,7 @@ Widget BottonStart(String textButton,BuildContext context,String path){
                   child: TextButton(
                     child: Text(textButton,
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppColor.backgroundColor,
                       fontSize: 25,
                     ),
                     ),

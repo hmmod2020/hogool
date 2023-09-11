@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 
@@ -31,7 +32,7 @@ class FarmerInfoScreen extends StatelessWidget {
                           children: [
                             Container(
                               margin: EdgeInsets.only(right: 10),
-                              child: Text("تفاصيل عن المزارع",
+                              child: Text(AppString.farmerDetails,
                                 style: TextStyle(
                                   fontSize: 32,
                                   color: AppColor.primaryColor,
@@ -86,7 +87,7 @@ class FarmerInfoScreen extends StatelessWidget {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                           Text("الحالة : ",
+                           Text(AppString.status,
                            style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
@@ -105,29 +106,29 @@ class FarmerInfoScreen extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              Text("الموقع : "),
+                              Text(AppString.location),
                               Text("الخرطوم"),
                             ],
                           ),
                           Row(
                             children: [
-                              Text("الخبرة : "),
+                              Text(AppString.exepiernce),
                               Text(5.toString()+" "),
-                              Text("سنوات")
+                              Text(AppString.years)
                               
                             ],
                           ),
                           
                           Row(
                             children: [
-                              Expanded(child: Text("رقم الهاتف : "+"0117034643")),
+                              Expanded(child: Text(AppString.phone+"0117034643")),
                              
                               
                             ],
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text("البريد الالكتروني : "+"mstar.hmmod@gmail.com"))
+                              Expanded(child: Text(AppString.emails+"mstar.hmmod@gmail.com"))
                             ],
                           ),
                         ],
@@ -178,7 +179,7 @@ class FarmerInfoScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(right:20 ),
                       child: Row(
                         children: [
-                          Text("نبذة عن المزارع : "),
+                          Text(AppString.aboutFarmer),
                         ],
                       ),
                     ),
@@ -197,7 +198,7 @@ class FarmerInfoScreen extends StatelessWidget {
                       child: Row(
                         ///لازم تصلح الغلط  المنطقي هنا 
                               children: [
-                                Text(" المحاصيل : "),
+                                Text(AppString.crops),
                                 Text("فلفل حار"+" "+", "),
                                 Text("طماطم"+" "+", "),
                                 Text("بطاطس"+"  "),
@@ -226,9 +227,9 @@ class FarmerInfoScreen extends StatelessWidget {
                                   onPressed:(){
                                   } ,
                                    child: Center(
-                                     child: Text("ارسال طلب عمل",
+                                     child: Text(AppString.sendJobRequests,
                                      style: TextStyle(
-                                      color: Colors.white,
+                                      color: AppColor.backgroundColor,
                                       fontSize:15,
                                       fontWeight: FontWeight.bold
                                      ),

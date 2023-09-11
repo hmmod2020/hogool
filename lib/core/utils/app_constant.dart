@@ -5,6 +5,10 @@ class appConstants {
   //api urls////////////////////
   static const String getAllFarmers = "show_farmer/0/";
   static const String getFarmer="show_farmer/";
+  static const String signUp="singUp/";
+  static const String signIn="api-token-auth/";
+  static const String getUserType="usertype/";
+  
  //api urls////////////////////
 
 //web api URLS

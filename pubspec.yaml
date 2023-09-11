@@ -52,6 +52,7 @@ dependencies:
   google_fonts:
   shimmer:
   internet_connection_checker_plus: ^1.0.1
+  shared_preferences: ^2.2.1
   
 
 dev_dependencies:

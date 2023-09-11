@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
+
+import '../core/themes/app_color.dart';
 
 class AccountFarmer extends StatelessWidget {
   
@@ -9,7 +12,7 @@ class AccountFarmer extends StatelessWidget {
   var descrotionCon=TextEditingController();
   var emailCon=TextEditingController();
   var userCon=TextEditingController();
-   String _groupVal="غير متاح";
+   String _groupVal=AppString.notAvailable;
    int expeirence=0;
 
   @override
@@ -27,7 +30,7 @@ class AccountFarmer extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("حسابي الشخصي",
+                    Text(AppString.personalAccount,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 35,
@@ -43,7 +46,7 @@ class AccountFarmer extends StatelessWidget {
                   child: TextField(
                     controller: fullNameCon,
                     decoration: InputDecoration(
-                                hintText:"الاسم الكامل",
+                                hintText:AppString.fullName,
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
                                 fillColor: AppColor.fillInputColor,
@@ -62,13 +65,13 @@ class AccountFarmer extends StatelessWidget {
                                 errorBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ),
                                 focusedErrorBorder:  OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ) 
                               ),
@@ -81,7 +84,7 @@ class AccountFarmer extends StatelessWidget {
                   child: TextField(
                     controller: userCon,
                     decoration: InputDecoration(
-                                hintText:"اسم المستخدم",
+                                hintText:AppString.userName,
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
                                 fillColor: AppColor.fillInputColor,
@@ -100,13 +103,13 @@ class AccountFarmer extends StatelessWidget {
                                 errorBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ),
                                 focusedErrorBorder:  OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ) 
                               ),
@@ -120,7 +123,7 @@ class AccountFarmer extends StatelessWidget {
                     controller: numberCon,
                     decoration: InputDecoration(
                       
-                                hintText:"رقم الهاتف",
+                                hintText:AppString.phoneC,
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
                                 fillColor: AppColor.fillInputColor,
@@ -140,13 +143,13 @@ class AccountFarmer extends StatelessWidget {
                                 errorBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ),
                                 focusedErrorBorder:  OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ) 
                               ),
@@ -160,7 +163,7 @@ class AccountFarmer extends StatelessWidget {
                     controller: emailCon,
                     decoration: InputDecoration(
                       
-                                hintText:"البريد الالكتروني",
+                                hintText:AppString.email,
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
                                 fillColor: AppColor.fillInputColor,
@@ -180,13 +183,13 @@ class AccountFarmer extends StatelessWidget {
                                 errorBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ),
                                 focusedErrorBorder:  OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ) 
                               ),
@@ -202,7 +205,7 @@ class AccountFarmer extends StatelessWidget {
             backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
-          optionsBackgroundColor:Colors.white,
+          optionsBackgroundColor:AppColor.backgroundColor,
           selectedOptionTextColor: AppColor.primaryColor,
           selectedOptionIcon: Icon(
             Icons.check,
@@ -211,25 +214,25 @@ class AccountFarmer extends StatelessWidget {
           ),
           backgroundColor: AppColor.fillInputColor,
           dropdownHeight: 180.0,
-          hint: "الموقع",
+          hint: AppString.locationC,
           onOptionSelected: ((selectedOptions) {
             print(selectedOptions);
           }),
            options: <ValueItem>[
 
-            ValueItem(label: "الخرطوم",value: "1"),
-            ValueItem(label: "ام درمان",value: "2"),
-            ValueItem(label: "بحري",value: "3"),
+            ValueItem(label: AppString.khartoum,value: "1"),
+            ValueItem(label: AppString.omdorman,value: "2"),
+            ValueItem(label: AppString.bahry,value: "3"),
            
         ]),
                   ),
             SizedBox(height: 15,),
-                TextField(
+                TextField(             
                   controller: descrotionCon,
                   maxLines: 15,
                   minLines: 10,
                     decoration: InputDecoration(
-                                hintText:"نبذة عن المزارع",
+                                hintText:AppString.aboutFarmerC,
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
                                 fillColor: AppColor.fillInputColor,
@@ -249,13 +252,13 @@ class AccountFarmer extends StatelessWidget {
                                 errorBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ),
                                 focusedErrorBorder:  OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ) 
                               ),
@@ -263,7 +266,7 @@ class AccountFarmer extends StatelessWidget {
                 SizedBox(height: 15,),
                 Row(     
                   children: [
-                    Text("المحاصيل الذي تعمل بها",
+                    Text(AppString.farmerCrops,
                         style: TextStyle(
                           color: AppColor.primaryColor,
                           fontSize: 25,
@@ -279,16 +282,16 @@ class AccountFarmer extends StatelessWidget {
             backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
-          optionsBackgroundColor:Colors.white,
+          optionsBackgroundColor:AppColor.backgroundColor,
           selectedOptionTextColor: AppColor.primaryColor,
           selectedOptionIcon: Icon(
             Icons.check,
             color: AppColor.primaryColor
             ,
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: AppColor.backgroundColor,
           dropdownHeight: 180.0,
-          hint: "اختر المحاصيل",
+          hint: AppString.selectCrops,
           onOptionSelected: ((selectedOptions) {
             print(selectedOptions);
           }),
@@ -315,12 +318,12 @@ class AccountFarmer extends StatelessWidget {
                         children: [
                           Radio(
                             focusColor: AppColor.primaryColor,
-                            value:"متاح" , groupValue: _groupVal, onChanged:((value) {
+                            value:AppString.available , groupValue: _groupVal, onChanged:((value) {
                               setState((){
                               _groupVal=value.toString();
                               });
                           })),
-                          Text("متاح",
+                          Text(AppString.available,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             
@@ -332,12 +335,12 @@ class AccountFarmer extends StatelessWidget {
                         children: [
                           Radio(
                             
-                            value:"غير متاح" , groupValue: _groupVal, onChanged:((value) {
+                            value:AppString.notAvailable, groupValue: _groupVal, onChanged:((value) {
                               setState((){
                               _groupVal=value.toString();
                               });
                           })),
-                          Text("غير متاح",
+                          Text(AppString.notAvailable,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             
@@ -353,7 +356,7 @@ class AccountFarmer extends StatelessWidget {
         SizedBox(height: 15,),
         Row(
           children: [
-            Text("الخبرة العملية",
+            Text(AppString.workExperience,
                         style: TextStyle(
                           color: AppColor.primaryColor,
                           fontSize: 25,
@@ -378,9 +381,9 @@ class AccountFarmer extends StatelessWidget {
                               onPressed: (){
                                
                               },
-                               child: Text("حفظ المعلومات",
+                               child: Text(AppString.save,
                                style: TextStyle(
-                                color: Colors.white,
+                                color: AppColor.backgroundColor,
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold
                                ),

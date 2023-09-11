@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 import '../core/themes/app_color.dart';
@@ -9,7 +10,7 @@ class CreateInvesmentScreen extends StatelessWidget {
   var duration=TextEditingController();
   var space=TextEditingController();
   var finance=TextEditingController();
-   String _groupVal="غير متاح";
+   String _groupVal=AppString.notAvailable;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +24,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("إنشاء عرض استثماري",
+                    Text(AppString.createInvesmentOffer,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 35,
@@ -36,7 +37,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                 SizedBox(height: 25,),
                 Row(
                   children: [
-                    Text("وصف العرض : ",
+                    Text(AppString.offerDescription,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 20
@@ -69,13 +70,13 @@ class CreateInvesmentScreen extends StatelessWidget {
                                 errorBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ),
                                 focusedErrorBorder:  OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ) 
                               ),
@@ -83,7 +84,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                  SizedBox(height: 25,),
                 Row(
                   children: [
-                    Text("وصف الارض : ",
+                    Text(AppString.landDescription,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 20
@@ -116,13 +117,13 @@ class CreateInvesmentScreen extends StatelessWidget {
                                 errorBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ),
                                 focusedErrorBorder:  OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ) 
                               ),
@@ -130,7 +131,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                 SizedBox(height: 20,),
                  Row(
                   children: [
-                    Text("نوع الري  : ",
+                    Text(AppString.irrigation_typemodels,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 20
@@ -148,7 +149,7 @@ class CreateInvesmentScreen extends StatelessWidget {
             backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
-          optionsBackgroundColor:Colors.white,
+          optionsBackgroundColor:AppColor.backgroundColor,
           selectedOptionTextColor: AppColor.primaryColor,
           selectedOptionIcon: Icon(
             Icons.check,
@@ -157,7 +158,7 @@ class CreateInvesmentScreen extends StatelessWidget {
           ),
           backgroundColor: AppColor.fillInputColor,
           dropdownHeight: 180.0,
-          hint: "النوع",
+          hint: AppString.type,
           onOptionSelected: ((selectedOptions) {
             print(selectedOptions);
           }),
@@ -172,7 +173,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                     SizedBox(height: 15,),
                      Row(
                   children: [
-                    Text("الموقع   : ",
+                    Text(AppString.location,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 20
@@ -190,7 +191,7 @@ class CreateInvesmentScreen extends StatelessWidget {
             backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
-          optionsBackgroundColor:Colors.white,
+          optionsBackgroundColor:AppColor.backgroundColor,
           selectedOptionTextColor: AppColor.primaryColor,
           selectedOptionIcon: Icon(
             Icons.check,
@@ -199,7 +200,7 @@ class CreateInvesmentScreen extends StatelessWidget {
           ),
           backgroundColor: AppColor.fillInputColor,
           dropdownHeight: 180.0,
-          hint: "الموقع",
+          hint: AppString.locationC,
           onOptionSelected: ((selectedOptions) {
             print(selectedOptions);
           }),
@@ -214,7 +215,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                    SizedBox(height: 15,),
                          Row(
                   children: [
-                    Text("مدة الاستثمار    : ",
+                    Text(AppString.durationInvesmnet,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 20
@@ -246,13 +247,13 @@ class CreateInvesmentScreen extends StatelessWidget {
                                 errorBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ),
                                 focusedErrorBorder:  OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ) 
                               ),
@@ -260,7 +261,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                 SizedBox(height: 15,),
                          Row(
                   children: [
-                    Text("التمويل : ",
+                    Text(AppString.finance,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 20
@@ -292,13 +293,13 @@ class CreateInvesmentScreen extends StatelessWidget {
                                 errorBorder: OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ),
                                 focusedErrorBorder:  OutlineInputBorder(  
                                   borderRadius: BorderRadius.all(Radius.circular(15),),
                                   borderSide: BorderSide(
-                                    color: Colors.red,
+                                    color: AppColor.hentError,
                                   ),
                                 ) 
                               ),
@@ -306,7 +307,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                   SizedBox(height: 15,),
                          Row(
                   children: [
-                    Text("حالة الارض : ",
+                    Text(AppString.landStatus,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 20
@@ -329,12 +330,12 @@ class CreateInvesmentScreen extends StatelessWidget {
                         children: [
                           Radio(
                             focusColor: AppColor.primaryColor,
-                            value:"متاح" , groupValue: _groupVal, onChanged:((value) {
+                            value:AppString.available , groupValue: _groupVal, onChanged:((value) {
                               setState((){
                               _groupVal=value.toString();
                               });
                           })),
-                          Text("متاح",
+                          Text(AppString.available,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             
@@ -346,12 +347,12 @@ class CreateInvesmentScreen extends StatelessWidget {
                         children: [
                           Radio(
                             
-                            value:"غير متاح" , groupValue: _groupVal, onChanged:((value) {
+                            value:AppString.notAvailable , groupValue: _groupVal, onChanged:((value) {
                               setState((){
                               _groupVal=value.toString();
                               });
                           })),
-                          Text("غير متاح",
+                          Text(AppString.notAvailable,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             
@@ -367,7 +368,7 @@ class CreateInvesmentScreen extends StatelessWidget {
            SizedBox(height: 15,),
                          Row(
                   children: [
-                    Text("مساحة الارض : ",
+                    Text(AppString.landSpace,
                     style: TextStyle(
                       color: AppColor.primaryColor,
                       fontSize: 20
@@ -402,13 +403,13 @@ class CreateInvesmentScreen extends StatelessWidget {
                                       errorBorder: OutlineInputBorder(  
                                         borderRadius: BorderRadius.all(Radius.circular(15),),
                                         borderSide: BorderSide(
-                                          color: Colors.red,
+                                          color: AppColor.hentError,
                                         ),
                                       ),
                                       focusedErrorBorder:  OutlineInputBorder(  
                                         borderRadius: BorderRadius.all(Radius.circular(15),),
                                         borderSide: BorderSide(
-                                          color: Colors.red,
+                                          color: AppColor.hentError,
                                         ),
                                       ) 
                                     ),
@@ -417,7 +418,7 @@ class CreateInvesmentScreen extends StatelessWidget {
                  Expanded(
                    child: Row(
                      children: [
-                       Text("  فدان",
+                       Text(AppString.space,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             fontSize: 25
@@ -442,9 +443,9 @@ class CreateInvesmentScreen extends StatelessWidget {
                               onPressed: (){
                                
                               },
-                               child: Text("حفظ المعلومات",
+                               child: Text(AppString.save,
                                style: TextStyle(
-                                color: Colors.white,
+                                color: AppColor.backgroundColor,
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold
                                ),

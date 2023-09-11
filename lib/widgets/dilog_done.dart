@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:lottie/lottie.dart';
 
 import '../core/themes/app_color.dart';
@@ -31,7 +32,7 @@ class DoneDilog extends StatelessWidget {
            ),
            Container(
             margin: EdgeInsets.only(top: 30),
-             child: Text("جاري انشاء حسابك على حقول",
+             child: Text(AppString.creatingAccount,
              style: TextStyle(
               color: AppColor.primaryColor,
               fontSize:20,

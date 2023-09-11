@@ -81,7 +81,7 @@ class SignInScreen extends StatelessWidget {
                               },
                                child: Text(AppString.login,
                                style: TextStyle(
-                                color: Colors.white,
+                                color: AppColor.backgroundColor,
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold
                                ),

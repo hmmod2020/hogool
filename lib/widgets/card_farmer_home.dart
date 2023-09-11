@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hogool/core/utils/app_string.dart';
 
 import '../core/themes/app_color.dart';
 
@@ -70,21 +71,21 @@ Widget screenRoute;
                         children: [
                           Row(
                             children: [
-                              Text("الموقع : "),
+                              Text(AppString.location),
                               Text(location!),
                             ],
                           ),
                           Row(
                             children: [
-                              Text("الخبرة : "),
+                              Text(AppString.exepiernce),
                               Text(exepiernce.toString()+" "),
-                              Text("سنوات")
+                              Text(AppString.years)
                               
                             ],
                           ),
                           Row(
                             children: [
-                              Text(" المحاصيل : "),
+                              Text(AppString.crops),
                               Text(crops![0]+" "+", "),
                               Text(crops![1]+" "+", "),
                               Text(crops![2]+"  "),
@@ -111,9 +112,9 @@ Widget screenRoute;
 
                             } ,
                              child: Center(
-                               child: Text("مزيد من التفاصيل",
+                               child: Text(AppString.moreInfo,
                                style: TextStyle(
-                                color: Colors.white,
+                                color: AppColor.backgroundColor,
                                 fontSize:12,
                                 fontWeight: FontWeight.bold
                                ),
