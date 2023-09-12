@@ -15,7 +15,7 @@ class AuthRepository extends AuthRepo{
   LocalAuthDataSource  localDataSource;
   NetworkManager networkManager;
    
-   AuthRepository({required this.localDataSource,required this.remoteDataSource ,required this.networkManager});
+   AuthRepository( this.localDataSource, this.remoteDataSource , this.networkManager);
   @override
   Future<Either<Failure, String>> SignInAndGetToken(SignInEntity data)async {
    if(await networkManager.isConnected){
@@ -67,8 +67,32 @@ class AuthRepository extends AuthRepo{
       return left(No_connection_failure());
     }
 
-
-   
+  }
+  
+  @override
+  Future<bool> isLoggedIn() async{
+   return await localDataSource.isLoggedIn();
+  }
+  
+  @override
+  Future<Unit> logOut() async {
+    if(await localDataSource.isLoggedIn()){
+      await localDataSource.removeToken();
+      await localDataSource.removeUserType();
+      return Future.value(unit);
+    }else{
+      return Future.value(unit);
+    }
+  }
+  
+  @override
+  Future<String?> getToken()async {
+    if(await localDataSource.isLoggedIn()){
+     return await localDataSource.getToken();
+    }else{
+      print("you are not logged in");
+      return "you are not logged in";
+    }
   }
 
-}
+}  

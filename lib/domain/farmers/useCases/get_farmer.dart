@@ -8,10 +8,9 @@ import '../repo/farmerRepo.dart';
 class GetFarmerUseCase {
 
 final FarmerRepository farmerRepository;
-final int id ;
-GetFarmerUseCase(this.farmerRepository,this.id);
+GetFarmerUseCase(this.farmerRepository);
 
-Future<Either<Failure,FarmerEntity>>call() async{
+Future<Either<Failure,FarmerEntity>>call(int id) async{
   return await farmerRepository.getFarmer(id);
 }
 

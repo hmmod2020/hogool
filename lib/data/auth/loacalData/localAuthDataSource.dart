@@ -14,6 +14,9 @@ abstract class LocalAuthDataSource{
 
 class LocalAuthDataSourceImp extends LocalAuthDataSource{
 
+  SharedPreferences sharedPreferences;
+  LocalAuthDataSourceImp(this.sharedPreferences);
+
   @override
   Future <String?> getToken() async {
     return await SharedPreferences.getInstance().then((value) => value.getString('token'));
@@ -35,31 +38,32 @@ class LocalAuthDataSourceImp extends LocalAuthDataSource{
     if(token==null){
     return true;
     }else{
-  return await SharedPreferences.getInstance().then((value) => value.remove("token"));
+      
+  return await sharedPreferences.remove("token");
     }
   }
 
   @override
   Future<Unit> setToken(String token)async {
-   await SharedPreferences.getInstance().then((value) => value.setString("token", token));
+   await sharedPreferences.setString("token", token);
     return Future.value(unit);
     
   }
   
   @override
   Future<String?> getUserType() async{
-   return await SharedPreferences.getInstance().then((value) => value.getString("userType"));
+   return await sharedPreferences.getString("userType");
   }
   
   @override
   Future<Unit> removeUserType() async{
-    await SharedPreferences.getInstance().then((value) => value.remove("userType"));
+    await sharedPreferences.remove("userType");
     return Future.value(unit);
   }
   
   @override
   Future<Unit> setUserType(String userType)async {
-    await SharedPreferences.getInstance().then((value) => value.setString("userType",userType ));
+    await sharedPreferences.setString("userType",userType );
     return Future.value(unit);
   }
 

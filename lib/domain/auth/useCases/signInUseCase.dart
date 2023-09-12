@@ -6,7 +6,7 @@ import 'package:hogool/domain/auth/repo/authRepo.dart';
 class SignInUseCase {
   
   AuthRepo repo;
-  SignInUseCase({required this.repo});
+  SignInUseCase( this.repo);
 
 
   Future<Either<Failure,String>>call(SignInEntity data){

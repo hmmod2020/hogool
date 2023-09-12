@@ -16,7 +16,7 @@ class FarmerRepositoryD extends FarmerRepository{
 FarmerDataSource dataSource;
 NetworkManager networkManager;
 
-FarmerRepositoryD({required this.dataSource,required this.networkManager});
+FarmerRepositoryD( this.dataSource, this.networkManager);
 
   @override
   Future<Either<Failure, List<FarmerEntity>>> getAllFarmers() async{

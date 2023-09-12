@@ -21,7 +21,7 @@ Future<String>getUserType();
  class RemoteAuthDataSourceImp  extends RemoteAuthDataSource{
   NetworkManager networkManager;
   LocalAuthDataSource localAuthDataSource;
-  RemoteAuthDataSourceImp({required this.networkManager,required this.localAuthDataSource});
+  RemoteAuthDataSourceImp(this.networkManager, this.localAuthDataSource);
   final dio = Dio();
   @override
   Future<SignInModelR> signInAndGetToken(SignInModel data) async{

@@ -7,6 +7,7 @@ import 'package:hogool/UI/sing_in_farmer.dart';
 import 'package:hogool/UI/sing_up_as_screen.dart';
 import 'package:hogool/widgets/card_invesmet_selected.dart';
 import 'package:lottie/lottie.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'UI/account_farmer.dart';
 import 'UI/account_farmer.dart';
 import 'UI/create_invesment_screen.dart';
@@ -22,7 +23,8 @@ import 'UI/welcome_screen.dart';
 import 'core/themes/app_color.dart';
 
 
-void main() {
+void main() async {
+ 
   runApp(
     CupertinoApp(
       theme: CupertinoThemeData(

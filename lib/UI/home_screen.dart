@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
         margin: EdgeInsets.only(right: 5),
         child: ClipRRect(
                         borderRadius: BorderRadius.all(Radius.circular(50)),
-                        child: Image.asset("mohmmed.jpg",
+                        child: Image.asset("assets/mohmmed.jpg",
                           fit: BoxFit.cover,
                           ),
                       ),

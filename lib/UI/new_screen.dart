@@ -37,7 +37,7 @@ class NewScreen extends StatelessWidget {
                       child: Card(
                         child:  ClipRRect(
                                   borderRadius:BorderRadius.all(Radius.circular(10)) ,
-                              child: Image.asset('khartoum.jpg',
+                              child: Image.asset('assets/khartoum.jpg',
                               fit: BoxFit.cover,
                               ),
                           ),

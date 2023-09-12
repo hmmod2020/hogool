@@ -7,8 +7,11 @@ import '../entities/signUp.dart';
 abstract class AuthRepo {
 
   Future<Either<Failure,String>>SignInAndGetToken(SignInEntity data);
-
   Future<Either<Failure,String>>getUserType();
-   Future<Either<Failure,String>>SignUp(SignUpEntity data);
+  Future<Either<Failure,String>>SignUp(SignUpEntity data);
+  Future<bool>isLoggedIn();
+  Future<Unit>logOut();
+  Future<String?>getToken();
+
   
 }

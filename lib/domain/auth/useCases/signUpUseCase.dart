@@ -9,7 +9,7 @@ class SignUpUseCase {
 
 AuthRepo repo;
 
-SignUpUseCase({required this.repo});
+SignUpUseCase(this.repo);
 
 Future<Either<Failure,String>>call(SignUpEntity data){
 

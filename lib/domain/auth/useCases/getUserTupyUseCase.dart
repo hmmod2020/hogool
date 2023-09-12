@@ -6,7 +6,7 @@ import 'package:hogool/network/signInNetwork.dart';
 class UserTypeUseCase{
 
 AuthRepo repo;
-UserTypeUseCase({required this.repo});
+UserTypeUseCase(this.repo);
 
 Future<Either<Failure,String>>call(){
 return repo.getUserType();

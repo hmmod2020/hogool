@@ -30,7 +30,7 @@ class SignInScreen extends StatelessWidget {
                   width: 130,
                   height: 130,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage('icon.png'),
+                    backgroundImage: AssetImage('assets/icon.png'),
                     
                                 ),
                 ),
