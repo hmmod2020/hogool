@@ -22,8 +22,8 @@ FarmerRepositoryD({required this.dataSource,required this.networkManager});
 try {
   final data= await dataSource.getAllFarmers();
   return right(data);
-} on ServerException {
-  return left(server_failure());
+} on ServerException catch (e) {
+  return left(server_failure(failureMsg:e.errorMessage));
 }
    }else{
    return left(No_connection_failure());
@@ -36,8 +36,8 @@ try {
     try {
       final data =await dataSource.getFarmer(id);
       return right(data);
-    } on ServerException {
-      return left(server_failure());
+    } on ServerException catch (e) {
+      return left(server_failure(failureMsg: e.errorMessage));
     }
    }else{
     return left(No_connection_failure());

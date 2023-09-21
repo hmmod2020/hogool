@@ -2,8 +2,10 @@
 import 'package:dio/dio.dart';
 import 'package:hogool/core/errors/exceptions.dart';
 import 'package:hogool/core/errors/failures.dart';
+import 'package:hogool/core/errors/serverErrorModel.dart';
 import 'package:hogool/core/helper/networkInfo.dart';
 import 'package:hogool/core/utils/app_constant.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:hogool/data/auth/loacalData/localAuthDataSource.dart';
 import 'package:hogool/data/auth/models/request/signInModel.dart';
 import 'package:hogool/data/auth/models/request/signUpModel.dart';
@@ -33,7 +35,9 @@ Future<String>getUserType();
     if(response.statusCode==200){
       return  SignInModelR.fromJson(response.data);
     }else{
-      throw ServerException();
+      var errors=ServerErrorModel.fromJson(response.data);
+
+      throw ServerException(errorMessage:errors.nonFieldErrors!.first);
     }
    }else{
     throw No_connection_exception();
@@ -43,15 +47,20 @@ Future<String>getUserType();
  
   @override
   Future< Unit> signUP(SignUpModel data)async {
+    print(appConstants.BASE_URL+appConstants.signUp,);
+    print(data.toJson());
 if(await networkManager.isConnected){
 var response = await dio.post(
-    appConstants.BASE_URL+appConstants.signUp,
+    "https://mihadkh2021.pythonanywhere.com/singUp/",
     data: data.toJson()
     );
-    if (response.statusCode==200&&response.data!="user is already exist"){
-      return Future.value(unit);
-    }else{
-      throw ServerException();
+    if (response.statusCode==200&&response.data=="user is already exist"){
+      throw ServerException(errorMessage:AppString.errorDublcatedUser);
+    }else if(response.statusCode==200&&response.data!="user is already exist"){
+      throw ServerException(errorMessage:AppString.errorServer);
+    }
+    else{
+     throw ServerException(errorMessage:AppString.errorServer);
     }
   }else{
    throw No_connection_exception();
@@ -74,7 +83,7 @@ var response = await dio.post(
       await localAuthDataSource.setUserType(response.data);
  return response.data;
     }else{
-      throw ServerException();
+      throw ServerException(errorMessage: AppString.errorServer);
     }
    }else{
     return "noUser";

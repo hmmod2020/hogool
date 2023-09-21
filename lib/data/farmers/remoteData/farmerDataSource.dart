@@ -32,7 +32,8 @@ if(response.statusCode==200){
   }
 return farmers;
     }else{
-      throw ServerException();
+      //have to up
+      throw ServerException(errorMessage: 'ldlskd;lak;ld');
     }
   }
   @override
@@ -46,7 +47,7 @@ return farmers;
      print (response.body);
      return FarmerModel.fromJson(response.data);
    }else{
-    throw ServerException();
+    throw ServerException(errorMessage: "sadasda");
    }  
   }
  

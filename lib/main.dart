@@ -1,10 +1,15 @@
+import 'dart:core';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hogool/UI/farmer_search_screen.dart';
 import 'package:hogool/UI/homeNav.dart';
 import 'package:hogool/UI/sing_in_farmer.dart';
 import 'package:hogool/UI/sing_up_as_screen.dart';
+import 'package:hogool/screens/auth/bloc/auth_bloc.dart';
+import 'package:hogool/screens/auth/pages/signUpPage.dart';
 import 'package:hogool/widgets/card_invesmet_selected.dart';
 import 'package:lottie/lottie.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -17,16 +22,30 @@ import 'UI/land_screen.dart';
 import 'UI/my_offers_screen.dart';
 import 'UI/new_screen.dart';
 import 'UI/projects_screen.dart';
-import 'UI/sign_up_farmer.dart';
 import 'UI/testScreen.dart';
 import 'UI/welcome_screen.dart';
+import 'core/services/service_locator.dart'as di;
 import 'core/themes/app_color.dart';
 
 
 void main() async {
- 
-  runApp(
-    CupertinoApp(
+ WidgetsFlutterBinding.ensureInitialized();
+ await di.init();
+  runApp(hogoolApp());
+}
+
+class hogoolApp extends StatelessWidget {
+  const hogoolApp ({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => di.sl<AuthBloc>(),
+        )
+      ],
+      child: CupertinoApp(
       theme: CupertinoThemeData(
         
         primaryColor: AppColor.primaryColor,
@@ -44,12 +63,13 @@ void main() async {
       routes: {
         "/signUpAs":(context) => SingUpAs(),
         "/welcomePage":(context) => WelcomeScreen(),
-        "/singUpFarmer":(context) => SingUpFarmer(),
+        "/singUpFarmer":(context) => SignUpScreen(),
         "/signIn":(context) => SignInScreen(),
         "/homeNav":(context) => HomeNav(),
 
     
       },
-    )
-  );
+    ),
+    );
+  }
 }

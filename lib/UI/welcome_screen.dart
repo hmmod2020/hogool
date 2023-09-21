@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:hogool/UI/sing_up_as_screen.dart';
 import 'package:hogool/network/global_data.dart';
+import 'package:hogool/screens/auth/pages/signUpPage.dart';
 import 'package:lottie/lottie.dart';
 import '../core/themes/app_color.dart';
 import '../core/utils/app_string.dart';

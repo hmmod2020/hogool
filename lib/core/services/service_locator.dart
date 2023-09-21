@@ -5,7 +5,9 @@ import 'package:hogool/data/auth/repo/authRepo.dart';
 import 'package:hogool/data/farmers/remoteData/farmerDataSource.dart';
 import 'package:hogool/domain/auth/repo/authRepo.dart';
 import 'package:hogool/domain/auth/useCases/getTokenUseCase.dart';
+import 'package:hogool/domain/auth/useCases/logOutUsecase.dart';
 import 'package:hogool/domain/auth/useCases/signInUseCase.dart';
+import 'package:hogool/domain/auth/useCases/signUpUseCase.dart';
 import 'package:hogool/domain/farmers/repo/farmerRepo.dart';
 import 'package:hogool/domain/farmers/useCases/get_all_farmers.dart';
 import 'package:hogool/domain/farmers/useCases/get_farmer.dart';
@@ -18,17 +20,21 @@ import '../../data/farmers/repo/farmerRepo.dart';
 import '../../domain/auth/useCases/checkedLoggedInUsecase.dart';
 import '../../domain/auth/useCases/getUserTupyUseCase.dart';
 
-final sl =GetIt.asNewInstance();
+final sl =GetIt.instance;
 
-class ServiceLocator{
-  var sharedPreferences = SharedPreferences.getInstance();
-  
 
-  void init() async{
+ 
+ 
+ Future<void> init() async{
 
+ final sharedPreferences = await SharedPreferences.getInstance();
+  final internetConnectionCheckerPlus=InternetConnectionCheckerPlus();
+   sl.registerLazySingleton(() => sharedPreferences);
     ///--Bloc
+    ///
     //sl.registerFactory(() => MoviesBloc(sl(), sl(), sl()));
     sl.registerFactory(() => AuthBloc(sl(), sl(), sl(), sl(), sl(), sl()));
+  
 
     ///--Use Cases
     
@@ -37,10 +43,11 @@ class ServiceLocator{
    sl.registerLazySingleton(() => GetFarmerUseCase(sl()));
    //auth
    sl.registerLazySingleton(() => SignInUseCase(sl()));
-   sl.registerLazySingleton(() => SignInUseCase(sl()));
+   sl.registerLazySingleton(() => SignUpUseCase(sl()));
    sl.registerLazySingleton(() => GetTokenUseCase(sl()));
    sl.registerLazySingleton(() => UserTypeUseCase(sl()));
    sl.registerLazySingleton(() => isLoggedIn(sl()));
+   sl.registerLazySingleton(() => LogoutUseCase(sl()));
     
 
     ///--Repository
@@ -66,9 +73,7 @@ class ServiceLocator{
     //--services
     sl.registerLazySingleton<NetworkManager>(() => NetworkManagerCheck(internetChecker: sl()));
     sl.registerLazySingleton<InternetConnectionCheckerPlus>(() => InternetConnectionCheckerPlus());
-    final sharedPreferences= SharedPreferences.getInstance();
-    sl.registerLazySingleton(() => sharedPreferences);
+      
     
   
   }
-}

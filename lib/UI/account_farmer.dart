@@ -26,8 +26,8 @@ class AccountFarmer extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 20,),
-                Row(
+                const SizedBox(height: 20,),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(AppString.personalAccount,
@@ -39,13 +39,13 @@ class AccountFarmer extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
                 SizedBox(
                   width: double.infinity,
                   height: 70,
                   child: TextField(
                     controller: fullNameCon,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                                 hintText:AppString.fullName,
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
@@ -77,13 +77,13 @@ class AccountFarmer extends StatelessWidget {
                               ),
                   ),
                 ),
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
                 SizedBox(
                   width: double.infinity,
                   height: 70,
                   child: TextField(
                     controller: userCon,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                                 hintText:AppString.userName,
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
@@ -115,13 +115,13 @@ class AccountFarmer extends StatelessWidget {
                               ),
                   ),
                 ),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
                 SizedBox(
                   width: double.infinity,
                   height: 70,
                   child: TextField(
                     controller: numberCon,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       
                                 hintText:AppString.phoneC,
                                 hintTextDirection: TextDirection.rtl,
@@ -155,13 +155,13 @@ class AccountFarmer extends StatelessWidget {
                               ),
                   ),
                 ),
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
                 Container(
                   width: double.infinity,
                   height: 70,
                   child:  TextField(
                     controller: emailCon,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       
                                 hintText:AppString.email,
                                 hintTextDirection: TextDirection.rtl,
@@ -195,19 +195,19 @@ class AccountFarmer extends StatelessWidget {
                               ),
                   ),
                 ),
-                 SizedBox(height: 15,),
+                 const SizedBox(height: 15,),
                 Container(
                   width: double.infinity,
                   height: 60,
                   child: MultiSelectDropDown(
                     selectionType: SelectionType.single,
-          chipConfig: ChipConfig(
+          chipConfig: const ChipConfig(
             backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
           optionsBackgroundColor:AppColor.backgroundColor,
           selectedOptionTextColor: AppColor.primaryColor,
-          selectedOptionIcon: Icon(
+          selectedOptionIcon: const Icon(
             Icons.check,
             color: AppColor.primaryColor
             ,
@@ -220,18 +220,18 @@ class AccountFarmer extends StatelessWidget {
           }),
            options: <ValueItem>[
 
-            ValueItem(label: AppString.khartoum,value: "1"),
-            ValueItem(label: AppString.omdorman,value: "2"),
-            ValueItem(label: AppString.bahry,value: "3"),
+            const ValueItem(label: AppString.khartoum,value: "1"),
+            const ValueItem(label: AppString.omdorman,value: "2"),
+            const ValueItem(label: AppString.bahry,value: "3"),
            
         ]),
                   ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
                 TextField(             
                   controller: descrotionCon,
                   maxLines: 15,
                   minLines: 10,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                                 hintText:AppString.aboutFarmerC,
                                 hintTextDirection: TextDirection.rtl,
                                 filled: true,
@@ -263,8 +263,8 @@ class AccountFarmer extends StatelessWidget {
                                 ) 
                               ),
                 ),
-                SizedBox(height: 15,),
-                Row(     
+                const SizedBox(height: 15,),
+                const Row(
                   children: [
                     Text(AppString.farmerCrops,
                         style: TextStyle(
@@ -276,15 +276,15 @@ class AccountFarmer extends StatelessWidget {
                   ],
                   
                 ),
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
                         MultiSelectDropDown(
-          chipConfig: ChipConfig(
+          chipConfig: const ChipConfig(
             backgroundColor: AppColor.primaryColor
           ),
           selectedOptionBackgroundColor:Colors.transparent ,
           optionsBackgroundColor:AppColor.backgroundColor,
           selectedOptionTextColor: AppColor.primaryColor,
-          selectedOptionIcon: Icon(
+          selectedOptionIcon: const Icon(
             Icons.check,
             color: AppColor.primaryColor
             ,
@@ -295,7 +295,7 @@ class AccountFarmer extends StatelessWidget {
           onOptionSelected: ((selectedOptions) {
             print(selectedOptions);
           }),
-           options: <ValueItem>[
+           options: const <ValueItem>[
 
             ValueItem(label: "الذرة",value: "1"),
             ValueItem(label: "القمح",value: "2"),
@@ -304,7 +304,7 @@ class AccountFarmer extends StatelessWidget {
             ValueItem(label: "خضروات",value: "5"),
 
         ]),
-        SizedBox(height: 50,),
+        const SizedBox(height: 50,),
           StatefulBuilder(builder: ((context, setState) {
           return Theme(
             data: Theme.of(context).copyWith(
@@ -323,7 +323,7 @@ class AccountFarmer extends StatelessWidget {
                               _groupVal=value.toString();
                               });
                           })),
-                          Text(AppString.available,
+                          const Text(AppString.available,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             
@@ -340,7 +340,7 @@ class AccountFarmer extends StatelessWidget {
                               _groupVal=value.toString();
                               });
                           })),
-                          Text(AppString.notAvailable,
+                          const Text(AppString.notAvailable,
                           style: TextStyle(
                             color: AppColor.primaryColor,
                             
@@ -353,8 +353,8 @@ class AccountFarmer extends StatelessWidget {
             ),
           );
         })),
-        SizedBox(height: 15,),
-        Row(
+        const SizedBox(height: 15,),
+        const Row(
           children: [
             Text(AppString.workExperience,
                         style: TextStyle(
@@ -367,7 +367,7 @@ class AccountFarmer extends StatelessWidget {
                         ////here is missing widget
           ],
         ),
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
         Container(
                             width: double.infinity,
                             height: 70,
@@ -381,7 +381,7 @@ class AccountFarmer extends StatelessWidget {
                               onPressed: (){
                                
                               },
-                               child: Text(AppString.save,
+                               child: const Text(AppString.save,
                                style: TextStyle(
                                 color: AppColor.backgroundColor,
                                 fontSize: 22,
@@ -391,7 +391,7 @@ class AccountFarmer extends StatelessWidget {
                                 ,
                                ),
                            ),
-                           SizedBox(height: 15,),
+                           const SizedBox(height: 15,),
               ],
             ),
           ),

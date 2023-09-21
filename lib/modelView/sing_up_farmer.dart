@@ -17,10 +17,13 @@ userData.accountType="farmer";
 server =new NetworkServeics();
 }
 
-String tempPassword="";
+
 
 
 //////////////////validation//////////////
+///
+///
+String tempPassword="";
 String? userNameIsValid(String value){
 if(value.isEmpty||value==" "){
   return "user name is requaired";

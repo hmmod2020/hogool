@@ -2,10 +2,15 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 
 class AppString {
+static const done="تم انشاء حسابك على حقول";
 static const introText ="تطبيق حقول ";
 static const introDescription ="الآن يمكنك أن تحظى بأفضل الفرص في الاستثمار \n الزراعي والزراعة بضغطة زر بكل راحة وأينما كنت.";
 static const start="ابدأ الآن مع حُقُول";
 static const farmer="مزارع";
+static const errorServer="توجد مشكلة في الخادم";
+static const errorLogin="اسم المستخدم او كلمة المرور خاطئة";
+static const errorDublcatedUser="الحساب مسجل مسبقا ";
+static const errorInternet="مشكلة بالاتصال بالانترنت";
 static const investor="مستثمر";
 static const moreDetails="التفاصيل";
 static const landOner="مالك اراضي";
@@ -16,6 +21,8 @@ static const password="كلمة المرور";
 static const v_password="تأكيد كلمة المرور";
 static const loadinLogin="جاري تسجيل الدخول";
 static const signUpFarmer= "تسجيل حساب المزارع ";
+static const signUpInvestor= "تسجيل حساب مستثمر ";
+static const signUpLandoner= "تسجيل حساب مالك ارض ";
 static const name="الإسم";
 static const email ="البريد الإلكتروني";
 static const loadingSignUp = "جاري تسجيل الحساب";
@@ -104,4 +111,14 @@ static const bahry="يحري";
 static const omdorman="أم درمان";
 static const invesmentName="اسم المشروع";
 static const searchFilter="فلترة البحث";
+static const errorSignUp="حدث خطأ بتسجيل الحساب";
+static const valdateUserName="اسم المستخدم مطلوب ";
+static const valdateName="ادخل اسمك";
+static const dontEmpty="لا تترك هذا الحقل فارغا";
+static const valdatePassword="ادخل 8 ارقام واحرف";
+static const valdatePasswordL="يجب عليك ادخال احرف صغيرة وكبيرة ";
+static const enterPassword="ادخل كلمة المرور";
+static const PasswordCompatibel="كلمتا المرور غير متطابقتين";
+
+
 }

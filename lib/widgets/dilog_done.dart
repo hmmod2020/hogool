@@ -32,7 +32,7 @@ class DoneDilog extends StatelessWidget {
            ),
            Container(
             margin: EdgeInsets.only(top: 30),
-             child: Text(AppString.creatingAccount,
+             child: Text(AppString.done,
              style: TextStyle(
               color: AppColor.primaryColor,
               fontSize:20,

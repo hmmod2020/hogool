@@ -1,7 +1,11 @@
+import 'dart:math';
+
+import 'package:chopper/chopper.dart';
 import 'package:dartz/dartz.dart';
 import 'package:hogool/core/errors/exceptions.dart';
 import 'package:hogool/core/errors/failures.dart';
 import 'package:hogool/core/helper/networkInfo.dart';
+import 'package:hogool/core/utils/app_string.dart';
 import 'package:hogool/data/auth/loacalData/localAuthDataSource.dart';
 import 'package:hogool/data/auth/models/request/signInModel.dart';
 import 'package:hogool/data/auth/models/request/signUpModel.dart';
@@ -30,8 +34,12 @@ class AuthRepository extends AuthRepo{
    }
    return right(response.token!);
       
-    }on ServerException{
-  return Left(server_failure());
+    }on ServerException catch (e){
+      if(e.errorMessage=="Unable to log in with provided credentials."){
+        return Left(server_failure(failureMsg: AppString.errorLogin));
+      }else{
+  return Left(server_failure(failureMsg: AppString.errorServer));
+  }
     }
    }else{
     return Left(No_connection_failure());
@@ -40,13 +48,14 @@ class AuthRepository extends AuthRepo{
 
   @override
   Future<Either<Failure, String>> SignUp(SignUpEntity data)async {
+    
   if(await networkManager.isConnected){
     try {
-       await remoteDataSource.signUP(data as SignUpModel);
+  await remoteDataSource.signUP(data as SignUpModel);
+    
        return right("Success"); 
-       
-    } on ServerException {
-      return Left(server_failure());
+    } on ServerException  catch (e){
+      return Left(server_failure(failureMsg:e.errorMessage));
     }
 
   }else{
@@ -60,8 +69,8 @@ class AuthRepository extends AuthRepo{
       try {
        return Right(await remoteDataSource.getUserType());
         
-      } on ServerException{
-        return Left(server_failure());
+      } on ServerException catch(e){
+        return Left(server_failure(failureMsg:e.errorMessage));
       }
     }else{
       return left(No_connection_failure());
